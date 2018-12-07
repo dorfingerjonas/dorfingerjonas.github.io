@@ -8,8 +8,13 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Klassenspiegel is a Frontend Web-Applikation for teachers to give their students marks.
 
 ```JavaScript
-let h1 = document.getElementById('h11').value;
-alert(h1);
+newStudent.classList.add('outputField');
+
+    for (let i = 0; i < outputArr.length; i++) {
+        outputArr[i].classList.add('output');
+        outputArr[i].textContent = studentData[i];
+        newStudent.appendChild(outputArr[i]);
+    }
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
