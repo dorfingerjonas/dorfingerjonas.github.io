@@ -5,7 +5,7 @@ You can use the [editor on GitHub](https://github.com/dorfingerjonas/dorfingerjo
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
-Klassenspiegel is a Frontend Web-Applikation for teachers to give their students marks.
+Klassenspiegel ist eine Web-Applikation für Lehrer um die Noten ihrer Schüler einzutragen.
 
 ```JavaScript
 newStudent.classList.add('outputField');
