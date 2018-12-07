@@ -5,8 +5,7 @@ You can use the [editor on GitHub](https://github.com/dorfingerjonas/dorfingerjo
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Klassenspiegel is a Frontend Web-Applikation for teachers to give their students marks.
 
 ```JavaScript
 let h1 = document.getElementById('h11').value;
