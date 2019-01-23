@@ -1,0 +1,50 @@
+html {
+  text-align: center;
+  overflow: hidden;
+}
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  position: relative;
+  top: 700px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+@keyframes rotateGear12 {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@keyframes rotateGear3 {
+  0%   {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}
+}
+#gear1 {
+  animation-name: rotateGear12;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 75px;
+  right: 845px;
+}
+
+#gear2 {
+  animation-name: rotateGear3;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+#gear3 {
+  animation-name: rotateGear12;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 170px;
+  right: 613px;
+}
