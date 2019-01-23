@@ -70,7 +70,12 @@ aside a:focus {
 }
 
 .icons i {
-  margin: 5px;
+  margin: 10px;
+  color: #c6c6c6;
+  transition: all 0.2s linear;
+}
+
+.icons i:hover {
   color: white;
 }
 
