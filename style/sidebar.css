@@ -80,3 +80,8 @@ aside a:focus {
 }
 
 /* Redcolor:  #dc5656;*/
+@media only screen and (max-width: 800px) {
+  aside {
+    background-color: #dc5656;
+  }
+}
