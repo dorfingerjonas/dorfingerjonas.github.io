@@ -1,8 +1,11 @@
+body {
+  overflow: scroll;
+}
+
 #contentWrapper {
   width: 70%;
   font-family: 'Ubuntu', sans-serif;
   margin: 0px 0px 0px 29%;
-  overflow-y: scroll;
 }
 
 #contentWrapper h1 {
