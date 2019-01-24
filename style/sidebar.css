@@ -25,7 +25,7 @@ aside h2 {
   font-size: 105%;
 }
 
-#navBox {
+aside #navBox {
   display: flex;
   width: 90%;
   position: relative;
@@ -46,16 +46,16 @@ aside img {
 
 aside a:link {
   text-decoration: none;
-  color: white;
+  color: #c6c6c6;
   transition: all 0.35s linear;
 }
 
 aside nav a:hover {
-  color: #969696;
+  color: white;
 }
 
 aside a:visited {
-  color: white;
+  color: #c6c6c6;
 }
 
 aside a:focus {
@@ -63,25 +63,122 @@ aside a:focus {
   outline: none;
 }
 
-.icons {
+aside .icons {
   text-align: center;
   width: 80%;
   margin: auto;
 }
 
-.icons i {
+aside .icons i {
   margin: 10px;
   color: #c6c6c6;
   transition: all 0.2s linear;
 }
 
-.icons i:hover {
+aside .icons i:hover {
   color: white;
 }
 
+#mobileView {
+  display: none;
+}
+
+#menuPoints {
+  float: right;
+  margin: 0 20px 0 0;
+}
+
 /* Redcolor:  #dc5656;*/
+
 @media only screen and (max-width: 800px) {
   aside {
-    background-color: #dc5656;
+    display: none;
+  }
+
+  #menuPoints {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+  }
+
+  #mobileView {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #273747;
+    margin: 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 140%;
+  }
+
+  #mobileView h1 {
+    letter-spacing: 0.20em;
+    margin-bottom: 2%;
+  }
+
+  #mobileView h2 {
+    opacity: 0.7;
+    margin-top: 1%;
+    margin-bottom: 7%;
+    font-size: 105%;
+  }
+
+  #mobileView #navBox {
+    display: flex;
+    width: 90%;
+    position: relative;
+    justify-content: center;
+  }
+
+  #mobileView nav {
+    line-height: 1.25em;
+    position: relative;
+    text-align: left;
+  }
+
+  #mobileView img {
+    width: 65%;
+    position: relative;
+    margin-top: 2vh;
+  }
+
+  #mobileView a:link {
+    text-decoration: none;
+    color: #c6c6c6;
+    transition: all 0.35s linear;
+  }
+
+  #mobileView nav a:hover {
+    color: white;
+  }
+
+  #mobileView a:visited {
+    color: #c6c6c6;
+  }
+
+  #mobileView a:focus {
+    color: white;
+    outline: none;
+  }
+
+  #mobileView .icons {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  #mobileView .icons i {
+    margin: 10px;
+    color: #c6c6c6;
+    transition: all 0.2s linear;
+  }
+
+  #mobileView .icons i:hover {
+    color: white;
   }
 }
