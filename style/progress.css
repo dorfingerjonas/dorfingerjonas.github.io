@@ -8,7 +8,7 @@ html {
   display: flex;
   justify-content: center;
 }
-h1 {
+.box h1 {
   position: relative;
   top: 700px;
   font-family: 'Ubuntu Condensed', sans-serif;
