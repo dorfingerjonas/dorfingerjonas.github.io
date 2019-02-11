@@ -1,24 +1,40 @@
 body {
   overflow-y: scroll;
+  width: 100vw;
 }
 
 #contentWrapper {
-  width: 70%;
+  max-width: 75%;
+  position: relative;
+  top: 0;
+  left: 0;
   font-family: 'Ubuntu', sans-serif;
-  margin: 0px 0px 0px 29%;
+  display: flex;
+  margin: 0 0 0 25%;
+  display: flex;
+  justify-content: center;
 }
 
 #contentWrapper h1 {
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 250%;
+  text-align: center;
 }
 
 .repo {
   width: 60%;
-  position: relative;
+  position: absolute;
   border: #a3a3a3 solid 3px;
   border-radius: 10px;
   padding: 10px;
+}
+
+.repo p {
+  text-align: left;
+}
+
+.repo h2 {
+  text-align: left;
 }
 
 .repo button {
@@ -28,5 +44,12 @@ body {
   border: #dc5656 solid 5px;
   margin: 5px;
   font-size: 110%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 1s linear;
+}
+
+.repo button:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
