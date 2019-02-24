@@ -9,8 +9,12 @@
   justify-content: center;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 #content {
-  max-width: 55%;
+  max-width: 70%;
   margin: 5%;
 }
 
@@ -19,44 +23,10 @@
   text-align: center;
 }
 
-#content h2 {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  text-align: center;
+tr {
+  width: 32%;
 }
 
-#images img {
-  width: 25%;
+img, td {
+  width: 32%;
 }
-
-/* .repo {
-  width: 60%;
-  position: absolute;
-  border: #a3a3a3 solid 3px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.repo p {
-  text-align: left;
-}
-
-.repo h2 {
-  text-align: left;
-}
-
-.repo button {
-  outline: none;
-  background-color: #dc5656;
-  border-radius: 100px;
-  border: #dc5656 solid 5px;
-  margin: 5px;
-  font-size: 110%;
-  cursor: pointer;
-  transform: scale(1);
-  transition: all 1s linear;
-}
-
-.repo button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-} */
