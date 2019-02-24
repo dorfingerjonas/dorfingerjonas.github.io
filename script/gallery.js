@@ -11,9 +11,9 @@ for (image of images) {
 let img = document.getElementById("images");
 let elements = [];
 
-	for (let i = 0; i < images.length; i++) {
-		elements[i] = document.createElement("img");
-		elements[i].src = images[i];
-    console.log("Elements " + i + elements[i]);
-		img.appendChild(elements[i]);
-	}
+// for (let i = 0; i < images.length; i++) {
+// 	elements[i] = document.createElement("img");
+// 	elements[i].src = images[i];
+//   console.log("Elements " + i + elements[i]);
+// 	img.appendChild(elements[i]);
+// }
