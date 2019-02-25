@@ -40,15 +40,9 @@ body {
   outline: none;
   background-color: #dc5656;
   border-radius: 100px;
-  border: #dc5656 solid 5px;
+  border: #dc5656 solid 4px;
   margin: 5px;
   font-size: 110%;
   cursor: pointer;
-  transform: scale(1);
-  transition: all 1s linear;
-}
-
-.repo button:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  user-select: none;
 }
