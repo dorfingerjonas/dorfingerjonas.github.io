@@ -1,0 +1,20 @@
+#contentWrapper {
+  max-width: 75%;
+  position: relative;
+  top: 0;
+  right: 0;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0 0 0 25%;
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  max-width: 50%;
+  margin: 5%;
+  text-align: justify;
+}
+
+#content h2 {
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
