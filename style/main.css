@@ -13,8 +13,13 @@
   max-width: 50%;
   margin: 5%;
   text-align: justify;
+  line-height: 1.7em;
 }
 
-#content h2 {
+#content h1 {
   font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#content p {
+  font-size: 110%;
 }
