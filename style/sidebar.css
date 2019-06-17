@@ -10,6 +10,7 @@ aside {
   color: white;
   font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 130%;
+  user-select: none;
 }
 
 aside h1 {

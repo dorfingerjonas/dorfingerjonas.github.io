@@ -3,6 +3,7 @@ body {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: block !important ;
 }
 
 #loader {
