@@ -30,6 +30,8 @@ const firebaseConfig = {
           let demo = entries[i].demo;
           let repo = entries[i].repo;
           let lang = entries[i].lang;
+          let state = entries[i].state;
+          state = 'state: ' + state;
 
         let contentWrapper = document.getElementById('repoWrapper');
         let newRepo = document.createElement('div');
@@ -40,12 +42,12 @@ const firebaseConfig = {
         let demoBox = document.createElement('a');
         let nameBox = document.createElement('h2');
         let repoBox = document.createElement('a');
-        let langBox = document.createElement('p');
+        let stateBox = document.createElement('p');
         let buttonBox = document.createElement('div');
         let img = document.createElement('img');
 
-        let eintragData = [nameBox, descBox];
-        let outputArr = [name, desc];
+        let eintragData = [nameBox, descBox, stateBox];
+        let outputArr = [name, desc, state];
 
         for (let i = 0; i < outputArr.length; i++) {
             eintragData[i].textContent = outputArr[i];            
@@ -55,7 +57,7 @@ const firebaseConfig = {
         if (demo !== 'none') {
             demoBox.href = 'https://' + demo;
             demoBox.target = '_blank';
-            demoBox.textContent = 'Demo';
+            demoBox.textContent = 'Preview';
             demoBox.classList.add('button');
             buttonBox.appendChild(demoBox);
         }
