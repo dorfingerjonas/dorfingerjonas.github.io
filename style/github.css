@@ -30,31 +30,54 @@ body {
   top: 3vh;
   margin: 3vh auto 3vh auto;
   box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  flex-direction: column;
 }
 
 .repo p {
   text-align: left;
+  margin: 1%;
 }
 
 .repo h2 {
   text-align: left;
+  margin-bottom: 3%;
+  margin-left: 1%;
+  margin-top: 0;
 }
 
-.repo button {
+.repo img {
+  width: 5vw;
+  position: absolute;
+  right: 1.5%;
+  user-select: none;
+}
+
+.repo .button {
   outline: none;
   background-color: white;
   border-radius: 100px;
   border: #273747ba 2px solid;
   color: #273747ba;
   padding: 7px 25px 7px 25px;
-  margin: 5px;
+  margin-right: 20px;
   font-size: 110%;
   cursor: pointer;
   user-select: none;
   transition: all 400ms ease-in-out;
+  text-decoration: none;
+  display: inline;
 }
 
-.repo button:hover {
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.repo .button:hover {
   color: white;
   background-color: #273747ba;
   border: #273747ba 2px solid;

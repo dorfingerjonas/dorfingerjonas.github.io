@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../script/load.js" charset="utf-8"></script>
+    <script src="../script/firebaseSDK.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="../script/repo.js"></script>
   </head>
   <body>
     <aside>
@@ -43,22 +47,7 @@
 
       <h1>GitHub Repositories</h1>
 
-      <div class="repo" id="first">
-        <h2>Volksschule Schwanenstadt</h2>
-        <p>The Website for the Volksschule Schwanenstadt was my first serious Web project.
-          It is a simple and clean Homepage for school.
-          My goal for this Website is to give parents informations and news of the school and what activities their kids are doing while they're in school.</p>
-
-        <a href="https://dorfingerjonas.github.io/Volksschule-Schwanenstadt/" target="_blank"><button type="button" name="button">Demo</button></a>
-        <a href="https://github.com/dorfingerjonas/Volksschule-Schwanenstadt" target="_blank"><button type="button" name="button">Repository</button></a>
-      </div>
-
-      <div class="repo">
-        <h2>Formularsicherheit</h2>
-          <h4>school excercise</h4>
-              <a href="https://dorfingerjonas.github.io/Formularsicherheit/" target="_blank"><button type="button" name="button">Demo</button></a>
-              <a href="https://github.com/dorfingerjonas/Formularsicherheit" target="_blank"><button type="button" name="button">Repository</button></a>
-      </div>
+      <div id="repoWrapper"></div>
     </div>
 
   </body>
