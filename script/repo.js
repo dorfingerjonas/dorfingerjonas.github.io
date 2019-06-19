@@ -1,5 +1,7 @@
 window.addEventListener('load', () => {
 
+  toggleAnimation();
+
 const firebaseConfig = {
     apiKey: "AIzaSyBd4ZNQRImSA-DLkRuQUShh8jqH-L9DVJM",
     authDomain: "jonas-dorfinger.firebaseapp.com",
@@ -79,6 +81,24 @@ const firebaseConfig = {
         newRepo.appendChild(img);
 
         contentWrapper.appendChild(newRepo);
+        toggleAnimation();
       }
     });
+
+    function toggleAnimation() {
+        const repoLoader = document.getElementById('repoLoader')
+        const elements = repoLoader.getElementsByTagName('div');
+     
+        // repoLoader.classList.toggle('hide');
+     
+         elements[0].classList.toggle('animate');
+     
+         setTimeout(() => {
+           elements[1].classList.toggle('animate');
+         }, 250);
+     
+         setTimeout(() => {
+           elements[2].classList.toggle('animate');
+         }, 500);
+    }
 });

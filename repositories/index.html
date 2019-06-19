@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/sidebar.css">
     <link rel="stylesheet" href="../style/github.css">
+    <link rel="stylesheet" href="../style/loader.css">
     <link rel="shortcut icon" href="../img/titleicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../script/load.js" charset="utf-8"></script>
-    <script src="../script/firebaseSDK.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="../script/repo.js"></script>
@@ -47,7 +47,14 @@
 
       <h1>GitHub Repositories</h1>
 
-      <div id="repoWrapper"></div>
+      <div id="repoWrapper">
+        <div class="loader hide" id="repoLoader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      
     </div>
 
   </body>
