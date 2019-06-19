@@ -28,6 +28,7 @@ const firebaseConfig = {
 
       for (let i = 0; i < entries.length; i++) {
           let name = entries[i].name;
+          name = name.replace(' ', '-');
           let desc = entries[i].description;
           let demo = entries[i].demo;
           let repo = entries[i].repo;
@@ -85,20 +86,42 @@ const firebaseConfig = {
       }
     });
 
-    function toggleAnimation() {
-        const repoLoader = document.getElementById('repoLoader')
-        const elements = repoLoader.getElementsByTagName('div');
-     
-        repoLoader.classList.toggle('hide');
-     
-         elements[0].classList.toggle('animate');
-     
-         setTimeout(() => {
-           elements[1].classList.toggle('animate');
-         }, 200);
-     
-         setTimeout(() => {
-           elements[2].classList.toggle('animate');
-         }, 400);
-    }
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        createAddButton();
+        console.log("logged in");
+        
+      } else {
+        deleteAddButton();
+        console.log("not logged in");
+      }
+    });
 });
+
+function createAddButton() {
+  const wrapper = document.getElementById('addBtnWrapper');
+  let buttonElm = document.createElement('div');
+  let iElm = document.createElement('i');
+  
+  iElm.classList.add('fas');
+  iElm.classList.add('fa-plus');
+
+  wrapper.appendChild(buttonElm.appendChild(iElm));
+}
+
+function toggleAnimation() {
+          const repoLoader = document.getElementById('repoLoader')
+          const elements = repoLoader.getElementsByTagName('div');
+       
+          repoLoader.classList.toggle('hide');
+       
+           elements[0].classList.toggle('animate');
+       
+           setTimeout(() => {
+             elements[1].classList.toggle('animate');
+           }, 200);
+       
+           setTimeout(() => {
+             elements[2].classList.toggle('animate');
+           }, 400);
+}

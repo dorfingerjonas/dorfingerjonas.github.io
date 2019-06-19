@@ -82,3 +82,14 @@ body {
   background-color: #273747ba;
   border: #273747ba 2px solid;
 }
+
+/* addBtnWrapper */
+
+#addBtnWrapper {
+  width: 10vw;
+  height: 10vw;
+  font-size: 150%;
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
