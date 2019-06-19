@@ -89,16 +89,16 @@ const firebaseConfig = {
         const repoLoader = document.getElementById('repoLoader')
         const elements = repoLoader.getElementsByTagName('div');
      
-        // repoLoader.classList.toggle('hide');
+        repoLoader.classList.toggle('hide');
      
          elements[0].classList.toggle('animate');
      
          setTimeout(() => {
            elements[1].classList.toggle('animate');
-         }, 250);
+         }, 200);
      
          setTimeout(() => {
            elements[2].classList.toggle('animate');
-         }, 500);
+         }, 400);
     }
 });

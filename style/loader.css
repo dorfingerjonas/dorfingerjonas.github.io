@@ -1,16 +1,19 @@
 .loader {
-    width: 100%;
+    width: 25%;
     height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    top: 45vh;
+    right: 27vw;
   }
   
   .loader div {
     border-radius: 100%;
-    background-color: black;
-    width: 2vw;
-    height: 2vw;
+    background-color: #273747;
+    width: 1vw;
+    height: 1vw;
   }
 
   .hide {
@@ -18,7 +21,7 @@
   }
   
   .animate {
-    animation: loaderDot 750ms ease-in-out infinite;
+    animation: loaderDot 600ms ease-in-out infinite;
   }
   
   @keyframes loaderDot {
