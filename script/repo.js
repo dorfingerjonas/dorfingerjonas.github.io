@@ -88,8 +88,6 @@ window.addEventListener('load', () => {
         newRepo.appendChild(img);
 
         contentWrapper.appendChild(newRepo);
-        document.getElementById('addBtnWrapper').style.display = 'flex';
-
       }
       toggleAnimation();
     });
@@ -101,10 +99,11 @@ window.addEventListener('load', () => {
         createAddButton();
       }
       console.log("logged in");
-      
+      document.getElementById('addBtnWrapper').style.display = 'flex';
     } else {
       deleteAddButton();
       console.log("not logged in");
+      document.getElementById('addBtnWrapper').style.display = 'none';
     }
   });
 });
@@ -190,6 +189,5 @@ function toggleAnimation() {
 
 function deleteAddButton() {
   const wrapper = document.getElementById('addBtnWrapper');
-  while (wrapper.firstChild) wrapperr.removeChild(wrapper.firstChild);
-      
+  while (wrapper.firstChild) wrapperr.removeChild(wrapper.firstChild);    
 }
