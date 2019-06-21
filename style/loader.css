@@ -21,7 +21,7 @@
   }
   
   .animate {
-    animation: loaderDot 600ms ease-in-out infinite;
+    animation: loaderDot 750ms ease-in-out infinite;
   }
   
   @keyframes loaderDot {

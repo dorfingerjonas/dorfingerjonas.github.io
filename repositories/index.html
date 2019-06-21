@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../img/titleicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e7df220bd7.js"></script>
     <script src="../script/load.js" charset="utf-8"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
@@ -37,9 +37,9 @@
 
       <div class="icons">
         <hr>
-        <a href="https://github.com/dorfingerjonas" target="_blank"><i class="fa fa-github" style="font-size: 40px"></i></a>
-        <a href="https://www.instagram.com/jdprdctn/" target="_blank"><i class="fa fa-instagram" style="font-size: 40px"></i></a>
-        <a href="https://www.youtube.com/channel/UClflTXNXtrM8p_jpYjez-oA?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play" style="font-size: 40px"></i></a>
+        <a href="https://github.com/dorfingerjonas" target="_blank"><i class="fab fa-github" style="font-size: 40px"></i></a>
+        <a href="https://www.instagram.com/jdprdctn/" target="_blank"><i class="fab fa-instagram" style="font-size: 40px"></i></a>
+        <a href="https://www.youtube.com/channel/UClflTXNXtrM8p_jpYjez-oA?view_as=subscriber" target="_blank"><i class="fab fa-youtube" style="font-size: 40px"></i></a>
       </div>
 
     </aside>
@@ -59,6 +59,27 @@
     </div>
 
     <div id="addBtnWrapper"></div>
+    <div id="addRepoWndw">
+      <span>name</span>
+      <input type="text" id="repoName">
+
+      <span>description</span>
+      <input type="text" id="repoDesc">
+
+      <span>state</span>
+      <input type="text" id="repoState">
+
+      <span>language</span>
+      <input type="text" id="repoLang">
+
+      <span>preview link</span>
+      <input type="text" id="repoDemo" value="dorfingerjonas.github.io/">
+
+      <span>repo link</span>
+      <input type="text" id="repoRepo" value="github.com/dorfingerjonas/">
+      
+      <button id="addRepoBtn" class="button">add repo</button>
+    </div>
 
   </body>
 </html>

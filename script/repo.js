@@ -1,8 +1,6 @@
 window.addEventListener('load', () => {
 
-  toggleAnimation();
-
-const firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyBd4ZNQRImSA-DLkRuQUShh8jqH-L9DVJM",
     authDomain: "jonas-dorfinger.firebaseapp.com",
     databaseURL: "https://jonas-dorfinger.firebaseio.com",
@@ -14,10 +12,14 @@ const firebaseConfig = {
   
   firebase.initializeApp(firebaseConfig);
 
-    let content;
-    let entries = [];
+  printRepos();
 
+  function printRepos() {
+    toggleAnimation();
     firebase.database().ref('public/repos').once('value').then((snapshot) => {
+
+      let content;
+      let entries = [];
 
       content = snapshot.val();
 
@@ -26,9 +28,13 @@ const firebaseConfig = {
         entries[entries.length] = content[index];
       }
 
+      console.log(entries);
+      
+
       for (let i = 0; i < entries.length; i++) {
           let name = entries[i].name;
           name = name.replace(' ', '-');
+          name = name.toLowerCase();
           let desc = entries[i].description;
           let demo = entries[i].demo;
           let repo = entries[i].repo;
@@ -82,20 +88,25 @@ const firebaseConfig = {
         newRepo.appendChild(img);
 
         contentWrapper.appendChild(newRepo);
-        toggleAnimation();
-      }
-    });
+        document.getElementById('addBtnWrapper').style.display = 'flex';
 
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        createAddButton();
-        console.log("logged in");
-        
-      } else {
-        deleteAddButton();
-        console.log("not logged in");
       }
+      toggleAnimation();
     });
+  }
+
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      if (user.uid === 'eFslsgqr1XZ9kHuGMQPdrfgmc0E3') {
+        createAddButton();
+      }
+      console.log("logged in");
+      
+    } else {
+      deleteAddButton();
+      console.log("not logged in");
+    }
+  });
 });
 
 function createAddButton() {
@@ -107,21 +118,78 @@ function createAddButton() {
   iElm.classList.add('fa-plus');
 
   wrapper.appendChild(buttonElm.appendChild(iElm));
+
+  iElm.style.transform = 'rotateZ(0deg)';
+
+  wrapper.addEventListener('click', () => {
+
+    const addRepoWndw = document.getElementById('addRepoWndw');
+    const addRepoBtn = document.getElementById('addRepoBtn');
+
+    if (iElm.style.transform === 'rotateZ(0deg)') {
+      iElm.style.transform = 'rotateZ(45deg)';
+      addRepoWndw.style.display = 'flex';
+      addRepoBtn.addEventListener('click', addNewRepo);
+    } else {
+      iElm.style.transform = 'rotateZ(0)';
+      addRepoWndw.style.display = 'none';
+      addRepoBtn.removeEventListener('click', addNewRepo);
+    }
+  });
+
+  function addNewRepo() {
+    let name = document.getElementById('repoName').value;
+    const desc = document.getElementById('repoDesc').value;
+    const state = document.getElementById('repoState').value;
+    const lang = document.getElementById('repoLang').value;
+    const demo = document.getElementById('repoDemo').value;
+    const repo = document.getElementById('repoRepo').value;
+
+    while (name.includes('.')) {
+      name = name.replace('.', '-');
+    }
+  
+    firebase.database().ref('public/repos/' + name).set({
+      name: name,
+      description: desc,
+      state: state,
+      lang: lang,
+      demo: demo,
+      repo: repo
+    }, (error) => {
+      if (error) {
+        console.log('couldnt add new repo');
+        console.error(error);
+      } else {
+        console.log('added new repo');
+        wrapper.click();
+        printRepos();
+        const repoWrapper = document.getElementById('repoWrapper');
+        while (repoWrapper.firstChild) repoWrapper.removeChild(repoWrapper.firstChild);
+      }
+    });
+  }
 }
 
 function toggleAnimation() {
-          const repoLoader = document.getElementById('repoLoader')
-          const elements = repoLoader.getElementsByTagName('div');
-       
-          repoLoader.classList.toggle('hide');
-       
-           elements[0].classList.toggle('animate');
-       
-           setTimeout(() => {
-             elements[1].classList.toggle('animate');
-           }, 200);
-       
-           setTimeout(() => {
-             elements[2].classList.toggle('animate');
-           }, 400);
+  const repoLoader = document.getElementById('repoLoader')
+  const elements = repoLoader.getElementsByTagName('div');
+
+  repoLoader.classList.toggle('hide');
+
+  elements[0].classList.toggle('animate');
+
+  setTimeout(() => {
+    elements[1].classList.toggle('animate');
+  }, 250);
+
+  setTimeout(() => {
+    elements[2].classList.toggle('animate');
+  }, 500);
+}
+
+function deleteAddButton() {
+  const wrapper = document.getElementById('addBtnWrapper');
+  while (wrapper.firstChild) wrapperr.removeChild(wrapper.firstChild);
+      
 }
