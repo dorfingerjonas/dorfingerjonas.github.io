@@ -1,5 +1,16 @@
 window.addEventListener('load', () => {
 
+  let filterOpen = false;
+  let entries = [];
+  const filterIcon = document.getElementById('filter');
+  const filterJava = document.getElementById('filterJava');
+  const filterNode = document.getElementById('filterNode');
+  const filterJS = document.getElementById('filterJS');
+  const filterHTML = document.getElementById('filterHTML');
+  const filterFS = document.getElementById('filterFS');
+  const filterIP = document.getElementById('filterIP');
+  const clearFilter = document.getElementById('clearFilter');
+
   const firebaseConfig = {
     apiKey: "AIzaSyBd4ZNQRImSA-DLkRuQUShh8jqH-L9DVJM",
     authDomain: "jonas-dorfinger.firebaseapp.com",
@@ -14,12 +25,64 @@ window.addEventListener('load', () => {
 
   printRepos();
 
+  filterIcon.addEventListener('click', toggleFilter);
+
+  filterJava.addEventListener('click', () => {
+    filterLang('Java');
+  });
+
+  filterNode.addEventListener('click', () => {
+    filterLang('node js');
+  });
+
+  filterJS.addEventListener('click', () => {
+    filterLang('JavaScript');
+  });
+
+  filterHTML.addEventListener('click', () => {
+    filterLang('HTML');
+  });
+
+  filterFS.addEventListener('click', () => {
+    filterState('finished');
+  });
+
+  filterIP.addEventListener('click', () => {
+    filterState('in progress');
+  });
+
+  clearFilter.addEventListener('click', () => {
+    for (const repo of entries) {
+      repo.element.style.display = 'flex';      
+    }
+  });
+
+
+  function filterLang(lang) {
+    for (const repo of entries) {
+      if (repo.lang !== lang) {
+        repo.element.style.display = 'none';
+      } else {
+        repo.element.style.display = 'flex';
+      }
+    }
+  }
+
+  function filterState(state) {
+    for (const repo of entries) {
+      if (repo.state !== state) {
+        repo.element.style.display = 'none';
+      } else {
+        repo.element.style.display = 'flex';
+      }
+    }
+  }
+
   function printRepos() {
     toggleAnimation();
     firebase.database().ref('public/repos').once('value').then((snapshot) => {
 
       let content;
-      let entries = [];
 
       content = snapshot.val();
 
@@ -88,9 +151,49 @@ window.addEventListener('load', () => {
         newRepo.appendChild(img);
 
         contentWrapper.appendChild(newRepo);
+        entries[i].element = newRepo;        
+
       }
+      searchRepo();
       toggleAnimation();
     });
+  }
+
+  function searchRepo() {
+    const searchField = document.getElementById('search');
+    
+    searchField.addEventListener('input', () => {
+      for (const repo of entries) {
+        if (!repo.name.includes(searchField.value.toLowerCase())) {
+          repo.element.style.display = 'none';
+        } else {
+          repo.element.style.display = 'flex';
+        }
+        
+      }      
+    })
+  }
+  function toggleFilter() {
+      const repos = document.getElementsByClassName('repo');
+      const filterbar = document.getElementById('filterBar');
+    
+      if (filterOpen) {
+        for (const repo of repos) {
+          repo.style.top = '3vh';
+        }
+        filterbar.style.top = '6vh';
+        filterbar.style.zIndex = -1;
+        filterOpen = false;
+      } else {
+        for (const repo of repos) {
+          repo.style.top = '12vh';
+        }
+        filterbar.style.top = '12vh';
+        setTimeout(() => {
+          filterbar.style.zIndex = 99;
+        }, 250);
+        filterOpen = true;
+      } 
   }
 
   firebase.auth().onAuthStateChanged((user) => {
@@ -106,6 +209,7 @@ window.addEventListener('load', () => {
       document.getElementById('addBtnWrapper').style.display = 'none';
     }
   });
+
 });
 
 function createAddButton() {
