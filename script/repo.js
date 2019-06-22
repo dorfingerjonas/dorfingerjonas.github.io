@@ -57,7 +57,6 @@ window.addEventListener('load', () => {
     }
   });
 
-
   function filterLang(lang) {
     for (const repo of entries) {
       if (repo.lang !== lang) {
@@ -89,10 +88,7 @@ window.addEventListener('load', () => {
       // Fill Array with Database Content
       for (let index in content) {
         entries[entries.length] = content[index];
-      }
-
-      console.log(entries);
-      
+      }      
 
       for (let i = 0; i < entries.length; i++) {
           let name = entries[i].name;
