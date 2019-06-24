@@ -91,15 +91,15 @@ window.addEventListener('load', () => {
       }      
 
       for (let i = 0; i < entries.length; i++) {
-          let name = entries[i].name;
-          name = name.replace(' ', '-');
-          name = name.toLowerCase();
-          let desc = entries[i].description;
-          let demo = entries[i].demo;
-          let repo = entries[i].repo;
-          let lang = entries[i].lang;
-          let state = entries[i].state;
-          state = 'state: ' + state;
+        let name = entries[i].name;
+        name = name.replace(' ', '-');
+        name = name.toLowerCase();
+        let desc = entries[i].description;
+        let demo = entries[i].demo;
+        let repo = entries[i].repo;
+        let lang = entries[i].lang;
+        let state = entries[i].state;
+        state = 'state: ' + state;
 
         let contentWrapper = document.getElementById('repoWrapper');
         let newRepo = document.createElement('div');
@@ -118,8 +118,8 @@ window.addEventListener('load', () => {
         let outputArr = [name, desc, state];
 
         for (let i = 0; i < outputArr.length; i++) {
-            eintragData[i].textContent = outputArr[i];            
-            newRepo.appendChild(eintragData[i]);
+          eintragData[i].textContent = outputArr[i];            
+          newRepo.appendChild(eintragData[i]);
         }
 
         if (demo !== 'none') {
@@ -169,6 +169,7 @@ window.addEventListener('load', () => {
       }      
     })
   }
+  
   function toggleFilter() {
       const repos = document.getElementsByClassName('repo');
       const filterbar = document.getElementById('filterBar');
@@ -226,12 +227,14 @@ function createAddButton() {
     const addRepoBtn = document.getElementById('addRepoBtn');
 
     if (iElm.style.transform === 'rotateZ(0deg)') {
-      iElm.style.transform = 'rotateZ(45deg)';
-      addRepoWndw.style.display = 'flex';
+      iElm.style.transform = 'rotateZ(225deg)';
+      addRepoWndw.style.opacity = 1;
+      addRepoWndw.style.right = '7vw';
       addRepoBtn.addEventListener('click', addNewRepo);
     } else {
       iElm.style.transform = 'rotateZ(0)';
-      addRepoWndw.style.display = 'none';
+      addRepoWndw.style.opacity = 0;
+      addRepoWndw.style.right = '-70vw';
       addRepoBtn.removeEventListener('click', addNewRepo);
     }
   });
@@ -280,11 +283,11 @@ function toggleAnimation() {
 
   setTimeout(() => {
     elements[1].classList.toggle('animate');
-  }, 250);
+  }, 150);
 
   setTimeout(() => {
     elements[2].classList.toggle('animate');
-  }, 500);
+  }, 250);
 }
 
 function deleteAddButton() {

@@ -103,7 +103,7 @@ body {
 
 #addBtnWrapper i {
   font-size: 2vw;
-  transition: 150ms transform ease-in-out;
+  transition: 500ms transform ease-in-out;
 }
 
 
@@ -111,16 +111,19 @@ body {
 
 #addRepoWndw {
   width: 55vw;
-  display: none;
+  display: flex;
   border-radius: 15px;
   position: fixed;
-  right: 4.5vw;
+  opacity: 0;
+  right: -70vw;
   bottom: 5vw;
   background-color: white;
   flex-direction: column;
   box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
   padding: 2.5%;
   font-family: 'Ubuntu Condensed', sans-serif;
+  transition: 500ms all ease-in-out;
+  /* transition: 500ms opacity ease-in-out; */
 }
 
 input {
