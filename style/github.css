@@ -8,7 +8,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0 0 0 25%;
   display: flex;
   justify-content: center;
@@ -16,20 +16,20 @@ body {
 }
 
 #contentWrapper h1 {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  position: relative;
-  font-size: 250%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 220%;
   text-align: center;
 }
 
 .repo {
-  width: 60%;
+  width: 45%;
   position: relative;
-  border-radius: 10px;
+  border: 1px solid #d1d5da;
+  border-radius: 5px;
   padding: 10px;
   top: 3vh;
   margin: 3vh auto 3vh auto;
-  box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
@@ -42,110 +42,123 @@ body {
   margin: 1%;
 }
 
-.repo h2 {
+.repo .name {
   text-align: left;
-  margin-bottom: 3%;
-  margin-left: 1%;
-  margin-top: 0;
+  margin: 0;
+  font-family: Segoe UI;
+  font-weight: 400;
+  font-size: 2.9vmin;
+  color: #0366d6;
+  outline: none;
+  text-decoration: none;
 }
 
-.repo img {
-  width: 5vw;
+.repo .name:hover {
+  text-decoration: underline;
+}
+
+.buttonWrapper {
+  font-size: 2.5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  right: 1.5%;
-  user-select: none;
+  right: .5vw;
+  bottom: 1vh;
 }
 
 .button {
   outline: none;
-  background-color: white;
-  border-radius: 100px;
-  border: #273747ba 2px solid;
-  color: #273747ba;
-  padding: 7px 25px 7px 25px;
-  margin-right: 20px;
-  font-size: 110%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: #495057 1.5px solid;
+  color: #495057;
+  padding: .6vmin .9vmin;
   cursor: pointer;
   user-select: none;
-  transition: all 400ms ease-in-out;
+  transition: all 200ms ease-in-out;
   text-decoration: none;
-  display: inline;
-}
-
-.buttonBox {
   display: flex;
-  justify-content: center;
-  margin-top: 2%;
-}
-
-.button:hover {
-  color: white;
-  background-color: #273747ba;
-  border: #273747ba 2px solid;
-}
-
-/* addBtnWrapper */
-
-#addBtnWrapper {
-  display: none;
-  width: 3.5vw;
-  height: 3.5vw;
-  border-radius: 100%;
-  background-color: #273747ba;
-  position: fixed;
-  right: 2vw;
-  bottom: 1vw;
   justify-content: center;
   align-items: center;
-  color: white;
-  cursor: pointer;
+  margin: 0 0 0 1vmin;
 }
 
-#addBtnWrapper i {
-  font-size: 2vw;
-  transition: 500ms transform ease-in-out;
+.button:focus {
+  border-color: #495057;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem #49505740;
 }
 
+.descriptionWrapper {
+  width: 90%;
+  font-size: 1.9vmin;
+}
 
-/* addRepoWndw */
+.descriptionWrapper p {
+  margin-left: 0;
+}
 
-#addRepoWndw {
-  width: 55vw;
+.infoWrapper {
   display: flex;
-  border-radius: 15px;
-  position: fixed;
-  opacity: 0;
-  right: -70vw;
-  bottom: 5vw;
-  background-color: white;
-  flex-direction: column;
-  box-shadow: 0 2px 10px 1px rgba(0,0,0,.2);
-  padding: 2.5%;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  transition: 500ms all ease-in-out;
-  /* transition: 500ms opacity ease-in-out; */
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  font-size: 1.5vmin;
 }
 
-input {
-  margin: 2% 0;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid lightgray;
-  transition: border-bottom 300ms ease-in-out;
+.updateWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 40%;
+  margin: 0 0 0 4vmin;
 }
 
-input:focus {
-  border-bottom: 2px solid #273747ba;
+.languageWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
 }
 
-#addRepoWndw button {
-  min-width: 15%;
+.languageCircle {
+  width: 10px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 0 .5vmin 0 0;
+}
+
+.javascript {
+  background:#f1e05a;
+}
+
+.html { 
+  background: #e34c26;
+}
+
+.css { 
+  background:#563d7c;
+}
+
+.php { 
+  background:#4F5D95;
+}
+
+.java { 
+  background:#b07219;
+}
+
+.tex { 
+  background:#3D6117;
 }
 
 /* Search */
 
 #searchWrapper {
-  margin-bottom: -4%;
+  margin-bottom: 2vh;
   user-select: none;
   background-color: white;
 }
@@ -154,37 +167,17 @@ input:focus {
   width: 20%;
   position: relative;
   left: 43vw;
+  border: none;
+  border-bottom: lightgray 2px solid;
+  transition: all 200ms ease-in-out;
+  outline: none;
+}
+
+#searchWrapper input:focus {
+  border-color: #495057;
 }
 
 #searchWrapper i {
   position: relative;
   left: 43vw;
-}
-
-#filter {
-  position: relative;
-  left: 15vw !important;
-  cursor: pointer;
-}
-
-#filterBar {
-  position: relative;
-  height: 5vh;
-  width: 60%;
-  left: 20%;
-  transition: top 400ms ease-in-out;
-  top: 6vh;
-  z-index: -1;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-#filterBar p {
-  cursor: pointer;
-  transition: 250ms all ease-in-out;
-}
-
-#filterBar p:hover {
-  color: #273747ba;
 }
