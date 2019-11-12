@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="../style/loader.css">
     <link rel="shortcut icon" href="../img/titleicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e7df220bd7.js"></script>
     <script src="../script/load.js" charset="utf-8"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="../script/octokit-rest.min.js"></script>
     <script src="../script/repo.js"></script>
   </head>
   <body>
@@ -45,26 +44,12 @@
     </aside>
 
     <div id="contentWrapper">
-
       <h1>repositories</h1>
 
       <div id="repoWrapper">
         <div id="searchWrapper">
-          <div id="filterBar">
-            <p id="filterJava">Java</p>
-            <p id="filterNode">node.js</p>
-            <p id="filterJS">JavaScript</p>
-            <p id="filterHTML">HTML</p>
-            <p id="filterFS">finished</p>
-            <p id="filterIP">in progress</p>
-            <p id="clearFilter">clear filters</p>
-          </div>
-
-          <i class="fas fa-filter" id="filter"></i>
-
           <input type="search" id="search" placeholder="search any repository">
           <i class="fas fa-search"></i>
-
         </div>
 
         <div class="loader hide" id="repoLoader">
@@ -73,30 +58,6 @@
           <div></div>
         </div>
       </div>
-      
-    </div>
-
-    <div id="addBtnWrapper"></div>
-    <div id="addRepoWndw">
-      <span>name</span>
-      <input type="text" id="repoName">
-
-      <span>description</span>
-      <input type="text" id="repoDesc">
-
-      <span>state</span>
-      <input type="text" id="repoState">
-
-      <span>language</span>
-      <input type="text" id="repoLang">
-
-      <span>preview link</span>
-      <input type="text" id="repoDemo" value="dorfingerjonas.github.io/">
-
-      <span>repo link</span>
-      <input type="text" id="repoRepo" value="github.com/dorfingerjonas/">
-      
-      <button id="addRepoBtn" class="button">add repo</button>
     </div>
 
   </body>
