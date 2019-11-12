@@ -1,158 +1,126 @@
 window.addEventListener('load', () => {
+  const octokit = new Octokit();
+  const entries = [];
 
-  let filterOpen = false;
-  let entries = [];
-  const filterIcon = document.getElementById('filter');
-  const filterJava = document.getElementById('filterJava');
-  const filterNode = document.getElementById('filterNode');
-  const filterJS = document.getElementById('filterJS');
-  const filterHTML = document.getElementById('filterHTML');
-  const filterFS = document.getElementById('filterFS');
-  const filterIP = document.getElementById('filterIP');
-  const clearFilter = document.getElementById('clearFilter');
+  octokit.request("GET https://api.github.com/users/:username/repos", {
+    username: 'dorfingerjonas',
+    per_page: 100
+  }).then(({data}) => {
+    const contentWrapper = document.querySelector('#repoWrapper');
+    
+    for (const repo of data) {
+      const newRepo = document.createElement('div');
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBd4ZNQRImSA-DLkRuQUShh8jqH-L9DVJM",
-    authDomain: "jonas-dorfinger.firebaseapp.com",
-    databaseURL: "https://jonas-dorfinger.firebaseio.com",
-    projectId: "jonas-dorfinger",
-    storageBucket: "jonas-dorfinger.appspot.com",
-    messagingSenderId: "47344971189",
-    appId: "1:47344971189:web:7dd58623493ae508"
-  };
-  
-  firebase.initializeApp(firebaseConfig);
+      const name = repo.name;
+      const language = repo.language;
+      const description = repo.description;
+      const lastUpdate = repo.pushed_at;
+      const homepage = repo.homepage;
 
-  printRepos();
+      const nameText = document.createElement('a');
+      nameText.textContent = name;
+      nameText.href = repo.html_url;
+      nameText.classList.add('name');
 
-  filterIcon.addEventListener('click', toggleFilter);
+      const infoWrapper = document.createElement('div');
 
-  filterJava.addEventListener('click', () => {
-    filterLang('Java');
-  });
+      const descriptionWrapper = document.createElement('div');
+      const descriptionText = document.createElement('p');
+      descriptionText.textContent = description;
 
-  filterNode.addEventListener('click', () => {
-    filterLang('node js');
-  });
+      const languageWrapper = document.createElement('div');
+      const languageCircle = document.createElement('div');
+      const languageText = document.createElement('p');
 
-  filterJS.addEventListener('click', () => {
-    filterLang('JavaScript');
-  });
+      const updateWrapper = document.createElement('div');
+      const updateText = document.createElement('p');
+      
+      let parts = lastUpdate.split('T');
+      const updated = new Date(parts[0]);
+      updateText.textContent = `Updated on ${updated.getDate()} ${getMonthShortString(updated.getMonth() + 1)}`;
 
-  filterHTML.addEventListener('click', () => {
-    filterLang('HTML');
-  });
+      updateWrapper.setAttribute('class', `updateWrapper`);
+      updateWrapper.appendChild(updateText);
 
-  filterFS.addEventListener('click', () => {
-    filterState('finished');
-  });
+      languageCircle.setAttribute('class', `languageCircle ${language.toLowerCase()}`);
+      languageText.textContent = language;
 
-  filterIP.addEventListener('click', () => {
-    filterState('in progress');
-  });
+      languageWrapper.appendChild(languageCircle);
+      languageWrapper.appendChild(languageText);
 
-  clearFilter.addEventListener('click', () => {
-    for (const repo of entries) {
-      repo.element.style.display = 'flex';      
-    }
-  });
+      const buttonWrapper = document.createElement('div');
+      buttonWrapper.classList.add('buttonWrapper');
 
-  function filterLang(lang) {
-    for (const repo of entries) {
-      if (repo.lang !== lang) {
-        repo.element.style.display = 'none';
-      } else {
-        repo.element.style.display = 'flex';
+      if (homepage !== '' && homepage !== null) {
+        const homepageBtn = document.createElement('a');
+        homepageBtn.href = homepage;
+        homepageBtn.innerHTML = '<i class="fas fa-globe-americas"></i>';
+        homepageBtn.classList.add('button');
+        buttonWrapper.appendChild(homepageBtn);
       }
+
+      // const cloneBtn = document.createElement('input');
+      // cloneBtn.value = repo.clone_url;
+      // cloneBtn.innerHTML = '<i class="fas fa-clone"></i>';
+      // cloneBtn.classList.add('cloneBtn');
+      // cloneBtn.classList.add('button');
+      // const popup = document.createElement('span');
+      // popup.textContent = 'Copied!';
+      // popup.classList.add('popupText');
+
+      // cloneBtn.addEventListener('click', () => {
+      //   popup.classList.toggle('show');
+      // });
+
+      // buttonWrapper.appendChild(cloneBtn);
+
+      newRepo.classList.add('repo');
+      languageWrapper.classList.add('languageWrapper');
+
+      descriptionWrapper.appendChild(descriptionText);
+      descriptionWrapper.classList.add('descriptionWrapper');
+
+      infoWrapper.classList.add('infoWrapper');
+      infoWrapper.appendChild(languageWrapper);
+      infoWrapper.appendChild(updateWrapper);
+
+      newRepo.appendChild(nameText);
+      newRepo.appendChild(descriptionWrapper);
+      newRepo.appendChild(infoWrapper);
+      newRepo.appendChild(buttonWrapper);
+      contentWrapper.appendChild(newRepo);
+      entries.push({name: name, language: language.toLowerCase(), element: newRepo});
     }
-  }
+    searchRepo();
+  });
 
-  function filterState(state) {
-    for (const repo of entries) {
-      if (repo.state !== state) {
-        repo.element.style.display = 'none';
-      } else {
-        repo.element.style.display = 'flex';
-      }
+  function getMonthShortString(month) {
+    switch (month) {
+      case 1:
+        return 'Jan';
+      case 2:
+        return 'Feb';
+      case 3:
+        return 'Mar';
+      case 4:
+        return 'Apr';
+      case 5:
+        return 'May';
+      case 6:
+        return 'Jun';
+      case 7:
+        return 'Jul';
+      case 8:
+        return 'Aug';
+      case 9:
+        return 'Sep';
+      case 10:
+        return 'Oct';
+      case 11:
+        return 'Nov';
+      case 12:
+        return 'Dec';
     }
-  }
-
-  function printRepos() {
-    toggleAnimation();
-    firebase.database().ref('public/repos').once('value').then((snapshot) => {
-
-      let content;
-
-      content = snapshot.val();
-
-      // Fill Array with Database Content
-      for (let index in content) {
-        entries[entries.length] = content[index];
-      }      
-
-      for (let i = 0; i < entries.length; i++) {
-        let name = entries[i].name;
-        name = name.replace(' ', '-');
-        name = name.toLowerCase();
-        let desc = entries[i].description;
-        let demo = entries[i].demo;
-        let repo = entries[i].repo;
-        let lang = entries[i].lang;
-        let state = entries[i].state;
-        state = 'state: ' + state;
-
-        let contentWrapper = document.getElementById('repoWrapper');
-        let newRepo = document.createElement('div');
-
-        newRepo.classList.add('repo');
-
-        let descBox = document.createElement('p');
-        let demoBox = document.createElement('a');
-        let nameBox = document.createElement('h2');
-        let repoBox = document.createElement('a');
-        let stateBox = document.createElement('p');
-        let buttonBox = document.createElement('div');
-        let img = document.createElement('img');
-
-        let eintragData = [nameBox, descBox, stateBox];
-        let outputArr = [name, desc, state];
-
-        for (let i = 0; i < outputArr.length; i++) {
-          eintragData[i].textContent = outputArr[i];            
-          newRepo.appendChild(eintragData[i]);
-        }
-
-        if (demo !== 'none') {
-            demoBox.href = 'https://' + demo;
-            demoBox.target = '_blank';
-            demoBox.textContent = 'Preview';
-            demoBox.classList.add('button');
-            buttonBox.appendChild(demoBox);
-        }
-
-        repoBox.href = 'https://' + repo;
-        repoBox.target = '_blank';
-        repoBox.textContent = 'Repository';
-        repoBox.classList.add('button');
-        buttonBox.appendChild(repoBox);
-
-        buttonBox.classList.add('buttonBox');
-        
-        newRepo.appendChild(buttonBox);
-
-        img.src = `../img/${lang}.png`;
-        img.alt = 'cannot display image';
-        img.title = lang;
-        img.draggable = false;
-        newRepo.appendChild(img);
-
-        contentWrapper.appendChild(newRepo);
-        entries[i].element = newRepo;        
-
-      }
-      searchRepo();
-      toggleAnimation();
-    });
   }
 
   function searchRepo() {
@@ -165,132 +133,7 @@ window.addEventListener('load', () => {
         } else {
           repo.element.style.display = 'flex';
         }
-        
       }      
     })
   }
-  
-  function toggleFilter() {
-      const repos = document.getElementsByClassName('repo');
-      const filterbar = document.getElementById('filterBar');
-    
-      if (filterOpen) {
-        for (const repo of repos) {
-          repo.style.top = '3vh';
-        }
-        filterbar.style.top = '6vh';
-        filterbar.style.zIndex = -1;
-        filterOpen = false;
-      } else {
-        for (const repo of repos) {
-          repo.style.top = '12vh';
-        }
-        filterbar.style.top = '12vh';
-        setTimeout(() => {
-          filterbar.style.zIndex = 99;
-        }, 250);
-        filterOpen = true;
-      } 
-  }
-
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      if (user.uid === 'eFslsgqr1XZ9kHuGMQPdrfgmc0E3') {
-        createAddButton();
-      }
-      console.log("logged in");
-      document.getElementById('addBtnWrapper').style.display = 'flex';
-    } else {
-      deleteAddButton();
-      console.log("not logged in");
-      document.getElementById('addBtnWrapper').style.display = 'none';
-    }
-  });
-
 });
-
-function createAddButton() {
-  const wrapper = document.getElementById('addBtnWrapper');
-  let buttonElm = document.createElement('div');
-  let iElm = document.createElement('i');
-  
-  iElm.classList.add('fas');
-  iElm.classList.add('fa-plus');
-
-  wrapper.appendChild(buttonElm.appendChild(iElm));
-
-  iElm.style.transform = 'rotateZ(0deg)';
-
-  wrapper.addEventListener('click', () => {
-
-    const addRepoWndw = document.getElementById('addRepoWndw');
-    const addRepoBtn = document.getElementById('addRepoBtn');
-
-    if (iElm.style.transform === 'rotateZ(0deg)') {
-      iElm.style.transform = 'rotateZ(225deg)';
-      addRepoWndw.style.opacity = 1;
-      addRepoWndw.style.right = '7vw';
-      addRepoBtn.addEventListener('click', addNewRepo);
-    } else {
-      iElm.style.transform = 'rotateZ(0)';
-      addRepoWndw.style.opacity = 0;
-      addRepoWndw.style.right = '-70vw';
-      addRepoBtn.removeEventListener('click', addNewRepo);
-    }
-  });
-
-  function addNewRepo() {
-    let name = document.getElementById('repoName').value;
-    const desc = document.getElementById('repoDesc').value;
-    const state = document.getElementById('repoState').value;
-    const lang = document.getElementById('repoLang').value;
-    const demo = document.getElementById('repoDemo').value;
-    const repo = document.getElementById('repoRepo').value;
-
-    while (name.includes('.')) {
-      name = name.replace('.', '-');
-    }
-  
-    firebase.database().ref('public/repos/' + name).set({
-      name: name,
-      description: desc,
-      state: state,
-      lang: lang,
-      demo: demo,
-      repo: repo
-    }, (error) => {
-      if (error) {
-        console.log('couldnt add new repo');
-        console.error(error);
-      } else {
-        console.log('added new repo');
-        wrapper.click();
-        printRepos();
-        const repoWrapper = document.getElementById('repoWrapper');
-        while (repoWrapper.firstChild) repoWrapper.removeChild(repoWrapper.firstChild);
-      }
-    });
-  }
-}
-
-function toggleAnimation() {
-  const repoLoader = document.getElementById('repoLoader')
-  const elements = repoLoader.getElementsByTagName('div');
-
-  repoLoader.classList.toggle('hide');
-
-  elements[0].classList.toggle('animate');
-
-  setTimeout(() => {
-    elements[1].classList.toggle('animate');
-  }, 150);
-
-  setTimeout(() => {
-    elements[2].classList.toggle('animate');
-  }, 250);
-}
-
-function deleteAddButton() {
-  const wrapper = document.getElementById('addBtnWrapper');
-  while (wrapper.firstChild) wrapperr.removeChild(wrapper.firstChild);    
-}
