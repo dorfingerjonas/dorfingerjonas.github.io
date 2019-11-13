@@ -127,10 +127,14 @@ window.addEventListener('load', () => {
     const searchField = document.getElementById('search');
     
     searchField.addEventListener('input', () => {
-      for (const repo of entries) {
-        if (!repo.name.includes(searchField.value.toLowerCase())) {
+      for (const repo of entries) {        
+        if (!(repo.name.toLowerCase().includes(searchField.value.toLowerCase()))) {
           repo.element.style.display = 'none';
         } else {
+          repo.element.style.display = 'flex';
+        }
+
+        if (repo.language.toLowerCase().includes(searchField.value.toLowerCase())) {
           repo.element.style.display = 'flex';
         }
       }      
