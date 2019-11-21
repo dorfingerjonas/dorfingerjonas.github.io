@@ -1,32 +1,19 @@
-#contentWrapper {
-  max-width: 75%;
-  position: relative;
-  top: 0;
-  right: 0;
-  font-family: 'Ubuntu', sans-serif;
-  margin: 0 0 0 25%;
+#content .image {
+  width: 32%;
+  margin: 0 .25% 0 .25%;
+}
+
+#content .panorama {
+  width: 98.3%;
+  margin: 0 1% 0 1%;
+}
+
+#images > div {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 1% 0;
 }
 
-body {
-  overflow-y: scroll;
-}
-
-#content {
-  max-width: 70%;
-  margin: 5%;
-}
-
-#content h1 {
-  font-family: 'Ubuntu Condensed', sans-serif;
-  text-align: center;
-}
-
-tr {
-  width: 32%;
-}
-
-img, td {
-  width: 32%;
+#images > img {
+  cursor: pointer;
 }

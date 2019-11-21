@@ -1,19 +1,26 @@
-const images = [];
+window.addEventListener('load', () => {
+  const howManyImages = 22;
+  const contentWrapper = document.querySelector('#images');
+  let newRow = document.createElement('div');
+  let rowCounter = 0;
 
-for (let i = 1; i <= 22; i++) {
-  images[i-1] = "../img/gallery/gallery_(" + i + ").jpg";
-}
+  for (let i = 0; i < howManyImages; i++) {
+    const newImage = document.createElement('img');
 
-for (image of images) {
-  console.log(image);
-}
+    newImage.src = `../img/gallery/gallery (${i+1}).jpg`;
+    newImage.alt = 'cannot display image';
 
-let img = document.getElementById("images");
-let elements = [];
-
-// for (let i = 0; i < images.length; i++) {
-// 	elements[i] = document.createElement("img");
-// 	elements[i].src = images[i];
-//   console.log("Elements " + i + elements[i]);
-// 	img.appendChild(elements[i]);
-// }
+    if (i !== 15) newImage.classList.add('image');
+    else newImage.classList.add('panorama');
+    
+    newRow.appendChild(newImage);
+    
+    rowCounter++;
+    
+    if ((rowCounter) % 3 === 0 || i === 15) {
+      contentWrapper.appendChild(newRow);
+      newRow = document.createElement('div');
+      rowCounter = 0;
+    }
+  }
+});

@@ -3,22 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Repositories - Jonas Dorfinger</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/repo.css">
     <link rel="stylesheet" href="../style/sidebar.css">
-    <link rel="stylesheet" href="../style/github.css">
-    <link rel="stylesheet" href="../style/loader.css">
-    <link rel="shortcut icon" href="../img/titleicon.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e7df220bd7.js"></script>
-    <script src="../script/load.js" charset="utf-8"></script>
     <script src="../script/octokit-rest.min.js"></script>
     <script src="../script/repo.js"></script>
   </head>
   <body>
     <aside>
-
       <a href="https://dorfingerjonas.github.io"><img src="../img/githubicon.png" alt="githubicon"></a>
 
       <h1>Jonas Dorfinger</h1>
@@ -35,26 +30,21 @@
       </div>
 
       <div class="icons">
-        <a href="https://github.com/dorfingerjonas" target="_blank"><i class="fab fa-github" style="font-size: 40px"></i></a>
-        <a href="https://www.instagram.com/jdprdctn/" target="_blank"><i class="fab fa-instagram" style="font-size: 40px"></i></a>
-        <a href="https://www.youtube.com/channel/UClflTXNXtrM8p_jpYjez-oA?view_as=subscriber" target="_blank"><i class="fab fa-youtube" style="font-size: 40px"></i></a>
+        <a href="https://github.com/dorfingerjonas" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:jonas.dorfinger@gmx.at"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/dorfingerjonas/" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
-
     </aside>
 
     <div id="contentWrapper">
-      <h1>repositories</h1>
+      <div id="content">
+        <h1>repositories</h1>
 
-      <div id="repoWrapper">
-        <div id="searchWrapper">
-          <input type="search" id="search" placeholder="search any repository">
-          <i class="fas fa-search"></i>
-        </div>
-
-        <div class="loader hide" id="repoLoader">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div id="repoWrapper">
+          <div id="searchWrapper">
+            <input type="search" id="search" placeholder="search any repository">
+            <i class="fas fa-search"></i>
+          </div>
         </div>
       </div>
     </div>
