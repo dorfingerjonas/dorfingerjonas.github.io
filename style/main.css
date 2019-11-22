@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+.hide {
+  display: none !important;
+}
+
 #contentWrapper {
   width: 75vw;
   min-height: 100vh;
