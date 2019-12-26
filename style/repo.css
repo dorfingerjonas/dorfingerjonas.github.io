@@ -1,16 +1,160 @@
-.repo {
-  width: 70%;
-  position: relative;
-  border: 1px solid #d1d5da;
-  border-radius: 5px;
-  padding: 10px;
-  top: 3vh;
-  margin: 3vh auto 3vh auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  flex-direction: column;
-  transition: top 400ms ease-in-out;
+@media screen and (min-width: 1160px) {
+  .repo {
+    width: 70%;
+    position: relative;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    padding: 10px;
+    top: 3vh;
+    margin: 3vh auto 3vh auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: column;
+    transition: top 400ms ease-in-out;
+  }
+
+  #searchWrapper {
+    margin-bottom: 2vh;
+    user-select: none;
+    background-color: white;
+  }
+
+  #searchWrapper input {
+    width: 40%;
+    position: relative;
+    left: 35vw;
+    border: none;
+    border-bottom: lightgray 2px solid;
+    outline: none;
+    transition: all 200ms ease-in-out;
+  }
+
+  #searchWrapper input:focus {
+    border-color: #495057;
+  }
+  
+  #searchWrapper i {
+    position: relative;
+    left: 35vw;
+  }
+
+  .repo .name {
+    font-size: 2.9vmin;
+  }
+
+  .buttonWrapper {
+    font-size: 2.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: .5vw;
+    bottom: 1vh;
+  }
+  
+  .button {
+    outline: none;
+    background-color: #fff;
+    border-radius: 10px;
+    border: #495057 1.5px solid;
+    color: #495057;
+    padding: .6vmin .9vmin;
+    cursor: pointer;
+    user-select: none;
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 1vmin;
+  }
+  
+  .button:focus {
+    border-color: #495057;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem #49505740;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .repo {
+    width: 93%;
+    position: relative;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    top: 3vh;
+    margin: 3vh auto 3vh auto;
+    padding: 4px 10px 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: column;
+    transition: top 400ms ease-in-out;
+  }
+
+  #searchWrapper {
+    margin: 5vh 0 0 0;
+    user-select: none;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #searchWrapper input {
+    width: 60%;
+    position: relative;
+    margin: 0 2vw 0 0;
+    border: none;
+    border-bottom: lightgray 2px solid;
+    outline: none;
+    transition: all 200ms ease-in-out;
+  }
+
+  #searchWrapper input:focus {
+    border-color: #495057;
+  }
+  
+  #searchWrapper i {
+    position: relative;
+  }
+
+  .repo .name {
+    font-size: 5vmin;
+  }
+
+  .buttonWrapper {
+    font-size: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1.5vw;
+    bottom: 1vh;
+  }
+  
+  .button {
+    outline: none;
+    background-color: #fff;
+    border-radius: 7px;
+    border: #495057 1.5px solid;
+    color: #495057;
+    padding: .7vmin 1vmin;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 1vmin;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .button:focus {
+    border-color: #495057;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem #49505740;
+  }
 }
 
 .repo p {
@@ -23,7 +167,6 @@
   margin: 0;
   font-family: Segoe UI;
   font-weight: 400;
-  font-size: 2.9vmin;
   color: #0366d6;
   outline: none;
   text-decoration: none;
@@ -33,45 +176,13 @@
   text-decoration: underline;
 }
 
-.buttonWrapper {
-  font-size: 2.5vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: .5vw;
-  bottom: 1vh;
-}
-
-.button {
-  outline: none;
-  background-color: #fff;
-  border-radius: 10px;
-  border: #495057 1.5px solid;
-  color: #495057;
-  padding: .6vmin .9vmin;
-  cursor: pointer;
-  user-select: none;
-  transition: all 200ms ease-in-out;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0 1vmin;
-}
-
-.button:focus {
-  border-color: #495057;
-  outline: 0;
-  box-shadow: 0 0 0 0.15rem #49505740;
-}
-
 .descriptionWrapper {
   width: 90%;
 }
 
 .descriptionWrapper p {
   margin-left: 0;
+  font-size: 2vh !important;
 }
 
 .infoWrapper {
@@ -131,31 +242,4 @@
 
 .tex { 
   background:#3D6117;
-}
-
-/* Search */
-
-#searchWrapper {
-  margin-bottom: 2vh;
-  user-select: none;
-  background-color: white;
-}
-
-#searchWrapper input {
-  width: 20%;
-  position: relative;
-  left: 43vw;
-  border: none;
-  border-bottom: lightgray 2px solid;
-  transition: all 200ms ease-in-out;
-  outline: none;
-}
-
-#searchWrapper input:focus {
-  border-color: #495057;
-}
-
-#searchWrapper i {
-  position: relative;
-  left: 43vw;
 }
