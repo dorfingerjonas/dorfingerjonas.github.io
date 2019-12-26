@@ -1,42 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Assistant&display=swap');
-
 body {
-  width: 100vw;
-  margin: 0 auto;
-  overflow-x: hidden;
+    width: 100vw;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .hide {
-  display: none !important;
+    display: none !important;
 }
 
-#contentWrapper {
-  width: 75vw;
-  min-height: 100vh;
-  position: relative;
-  top: 0;
-  right: 0;
-  margin: 0 0 0 25%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-#content {
-  width: 65%;
-  text-align: justify;
-  line-height: 1.7em;
-  position: relative;
-  top: 7vh;
-  font-family: 'Assistant', sans-serif;
-}
-
-#content h1 {
-  text-align: center;
-  font-size: 2.3vw;
-}
-
-#content p {
-  font-size: 1.1vw;
+.overflowHidden {
+    overflow: hidden;
 }
