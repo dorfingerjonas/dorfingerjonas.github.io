@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gallery - Jonas Dorfinger</title>
     <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/sidebar.css">
     <link rel="stylesheet" href="../style/gallery.css">
+    <link rel="stylesheet" href="../style/menu.css" media="screen and (max-width: 1160px)">
+    <link rel="stylesheet" href="../style/mobileMain.css" media="screen and (max-width: 1160px)">
+    <link rel="stylesheet" href="../style/desktopMain.css" media="screen and (min-width: 1160px)">
+    <link rel="stylesheet" href="../style/mobileSidebar.css" media="screen and (max-width: 1160px)">
+    <link rel="stylesheet" href="../style/desktopSidebar.css" media="screen and (min-width: 1160px)">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <script src="../script/gallery.js" charset="utf-8"></script>
+    <script src="../script/menu.js"></script>
     <script src="https://kit.fontawesome.com/e7df220bd7.js" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   </head>
   <body>
-    <aside>
+    <aside id="nav">
       <a href="https://dorfingerjonas.github.io"><img src="../img/githubicon.png" alt="githubicon"></a>
 
       <h1>Jonas Dorfinger</h1>
@@ -38,6 +43,12 @@
         <a href="https://www.instagram.com/dorfingerjonas/"><i class="fab fa-instagram"></i></a>
       </div>
     </aside>
+
+    <div id="menu">
+      <div class="bar" id="barOne"></div>
+      <div class="bar" id="barTwo"></div>
+      <div class="bar" id="barThree"></div>
+    </div>
 
     <div id="contentWrapper">
       <div id="content">
@@ -63,6 +74,8 @@
               </div>
             </div>
           </div>
+
+          <div id="disableSlideshow" class="hide"></div>
         </div>
       </div>
     </div>
