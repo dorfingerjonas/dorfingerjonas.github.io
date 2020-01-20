@@ -221,7 +221,7 @@
 }
 
 .javascript {
-  background:#f1e05a;
+  background: #f1e05a;
 }
 
 .html { 
@@ -229,17 +229,21 @@
 }
 
 .css { 
-  background:#563d7c;
+  background: #563d7c;
 }
 
 .php { 
-  background:#4F5D95;
+  background: #4F5D95;
 }
 
 .java { 
-  background:#b07219;
+  background: #b07219;
 }
 
 .tex { 
-  background:#3D6117;
+  background: #3D6117;
+}
+
+.kotlin {
+  background: #F18E33;
 }
