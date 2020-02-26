@@ -1,55 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="theme-color" content="#273747">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- General -->
     <title>Jonas Dorfinger</title>
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/menu.css">
-    <link rel="stylesheet" href="./style/mobileMain.css" media="screen and (max-width: 1160px)">
-    <link rel="stylesheet" href="./style/mobileSidebar.css" media="screen and (max-width: 1160px)">
-    <link rel="stylesheet" href="./style/desktopMain.css" media="screen and (min-width: 1160px)">
-    <link rel="stylesheet" href="./style/desktopSidebar.css" media="screen and (min-width: 1160px)">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <script src="./script/menu.js"></script>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/skills.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <!-- Libraries -->
     <script src="https://kit.fontawesome.com/e7df220bd7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Script Files -->
+    <script src="./script/nav.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/scroll.js"></script>
   </head>
   <body>
-    <aside id="nav">
-      <a href="https://dorfingerjonas.github.io"><img src="../img/githubicon.png" alt="githubicon"></a>
+    <nav>
+      <span>Jonas Dorfinger</span>
+      
+      <ul>
+        <li id="homeNav">Home</li>
+        <li id="aboutNav">About</li>
+        <li id="skillsNav">Skills</li>
+        <li id="workNav">Work</li>
+        <li id="galleryNav">Gallery</li>
+        <li id="contactNav">Contact</li>
+      </ul>
+    </nav>
 
-      <h1>Jonas Dorfinger</h1>
-      <h2>Developer. Photographer.</h2>
+    <section id="homeSection" class="wholeScreen" data-depth="0.6">
+      <h1 data-aos="fade-down" data-aos-duration="1400" data-aos-easing="ease-out">Jonas Dorfinger</h1>
+      <p data-aos="fade-down" data-aos-duration="1400" data-aos-easing="ease-out">Developer. Photographer.</p>
+    </section>
 
-      <div id="navBox">
-        <nav>
-          <a href="./gallery"><p>Gallery</p></a>
-          <a href="./work"><p>Work</p></a>
-          <a href="./repositories"><p>Repositories</p></a>
-          <a href="./about"><p>About me</p></a>
-          <a href="./contact"><p>Contact me</p></a>
-        </nav>
+    <section id="aboutSection" class="wholeScreen">
+      <h1>About</h1>
+    </section>
+    
+    <section id="skillsSection">
+      <h1>Skills</h1>
+
+      <div id="skillWrapper">
+        <div class="skill">
+          <div class="skillHeadline">
+            <i class="fas fa-comments"></i>
+            <h2>Communication</h2>
+          </div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit vero autem voluptas iste perferendis? Eligendi ullam dignissimos cupiditate, fuga amet, eveniet autem repellat quod suscipit ut illum quo a rerum!
+        </div>
+
+        <div class="skill">
+          <div class="skillHeadline">
+            <i class="fas fa-code"></i>
+            <h2>HTML, CSS, JavaScript</h2>
+          </div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit vero autem voluptas iste perferendis? Eligendi ullam dignissimos cupiditate, fuga amet, eveniet autem repellat quod suscipit ut illum quo a rerum!
+        </div>
+
+        <div class="skill">
+          <div class="skillHeadline">
+            <i class="fas fa-users"></i>
+            <h2>social</h2>
+          </div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit vero autem voluptas iste perferendis? Eligendi ullam dignissimos cupiditate, fuga amet, eveniet autem repellat quod suscipit ut illum quo a rerum!
+        </div>
+      </div>
+    </section>
+
+    <section id="workSection" class="wholeScreen">
+      <h1>Work</h1>
+    </section>
+
+    <section id="gallerySection" class="wholeScreen">
+      <h1>Gallery</h1>
+    </section>
+
+    <section id="contactSection" class="wholeScreen">
+      <h1>Contact</h1>
+    </section>
+
+    <footer>
+      <div id="iconBox">
+        <a href="https://github.com/dorfingerjonas/"><i class="fab fa-github"></i></a>
+        <a href="mailto:jonas.dorfinger@gmx.at"><i class="fas fa-envelope"></i></a>
+        <a href="https://instagram.com/dorfingerjonas/"><i class="fab fa-instagram"></i></a>
+        <a href="https://codepen.io/dorfingerjonas"><i class="fab fa-codepen"></i></a>
       </div>
 
-      <div class="icons">
-        <a href="https://github.com/dorfingerjonas"><i class="fab fa-github"></i></a>
-        <a href="mailto:jonas.dorfinger@gmx.at"><i class="far fa-envelope"></i></a>
-        <a href="https://www.instagram.com/dorfingerjonas/"><i class="fab fa-instagram"></i></a>
-      </div>
-    </aside>
-
-    <div id="menu">
-      <div class="bar" id="barOne"></div>
-      <div class="bar" id="barTwo"></div>
-      <div class="bar" id="barThree"></div>
-    </div>
-
-    <div id="contentWrapper">
-      <div id="content">
-        <h1>welcome</h1>
-      </div>
-    </div>
-
+      <p>© Copyright. All rights reserved.</p>
+    </footer>
   </body>
 </html>
