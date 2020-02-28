@@ -23,7 +23,7 @@ section {
 }
 
 .wholeScreen {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #homeSection {
@@ -46,8 +46,4 @@ section {
     color: #fff;
     margin: 0;
     font-size: 1.5vw;
-}
-
-#workSection, #aboutSection {
-    background: #42b983;
 }
