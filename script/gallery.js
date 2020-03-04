@@ -21,7 +21,9 @@ window.addEventListener('load', () => {
     });
 
     nextImage.addEventListener('click', () => {
-        slideshowImages.style.left = `${parseInt(slideshowImages.style.left) - width}vw`;
+        if (parseInt(slideshowImages.style.left) - width >= (howManyImages - 1) * (width * (-1))) {
+            slideshowImages.style.left = `${parseInt(slideshowImages.style.left) - width}vw`;
+        }
     });
 
     previousImage.addEventListener('click', () => {
