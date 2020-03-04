@@ -1,6 +1,7 @@
 #gallerySection {
     height: auto;
     z-index: -1;
+    image-rendering: optimizeSpeed;
 }
 
 #images {
@@ -44,8 +45,9 @@
 }
 
 #slideshowImages {
+    width: 210vw;
     position: absolute;
-    left: 0;
+    left: -70vw;
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -72,14 +74,14 @@
     z-index: 2;
 }
 
-#previousImage {
+#previousImageBtn {
     position: absolute;
     left: 10vh;
     cursor: pointer;
     font-size: 2vw;
 }
 
-#nextImage {
+#nextImageBtn {
     position: absolute;
     right: 10vh;
     cursor: pointer;
