@@ -1,12 +1,12 @@
-const howManyImages = 22;
+const howManyImages = 21;
 
 window.addEventListener('load', () => {
     const imageWrapper = document.querySelector('#images');
     const slideshowImages = document.querySelector('#slideshowImages');
     const slideshowWrapper = document.getElementById('slideshowWrapper');
     const disableSlideshow = document.getElementById('disableSlideshow');
-    const previousImage = document.getElementById('previousImage');
-    const nextImage = document.getElementById('nextImage');
+    const previousImage = document.getElementById('previousImageBtn');
+    const nextImage = document.getElementById('nextImageBtn');
     const close = document.getElementById('close');
     const width = 70;
     let newRow = document.createElement('div');
@@ -85,6 +85,10 @@ window.addEventListener('load', () => {
         });
         
         newRow.appendChild(newImage);
+
+        if (i > 11) {
+            newRow.classList.add('hide');
+        }
         
         rowCounter++;
         
