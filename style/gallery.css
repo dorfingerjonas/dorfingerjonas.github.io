@@ -6,6 +6,7 @@
 
 #images {
     width: 80vw;
+    user-select: none;
 }
 
 #images div {
@@ -18,7 +19,7 @@
 
 #images img {
     width: 19.5vw;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 #images .panorama {
