@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     window.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowRight' && parseInt(slideshowImages.style.left) - width >= (howManyImages - 1) * (width * (-1)))  {
             nextImage.click();
-        } else if (event.key === 'ArrowLeft' && (parseInt(slideshowImages.style.left) + width) <= 0) {
+        } else if (event.key === 'ArrowLeft' && parseInt(slideshowImages.style.left) + width <= 0) {
             previousImage.click();
         }
     });
