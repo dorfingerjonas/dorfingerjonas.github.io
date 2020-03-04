@@ -35,3 +35,22 @@ footer {
     background: white;
     color: #353535;
 }
+
+.footerRow {
+    width: 94vw;
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footerRow a {
+    color: white;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+}
+
+.footerRow a:hover {
+    color: darkgray;
+}
