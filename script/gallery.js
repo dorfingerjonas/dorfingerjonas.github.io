@@ -27,7 +27,9 @@ window.addEventListener('load', () => {
     });
 
     previousImage.addEventListener('click', () => {
-        slideshowImages.style.left = `${parseInt(slideshowImages.style.left) + width}vw`;
+        if (parseInt(slideshowImages.style.left) + width <= 0) {
+            slideshowImages.style.left = `${parseInt(slideshowImages.style.left) + width}vw`;
+        }
     });
 
     close.addEventListener('click', () => {
