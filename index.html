@@ -22,6 +22,9 @@
     <script src="https://kit.fontawesome.com/e7df220bd7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Script Files -->
     <script src="./script/nav.js"></script>
     <script src="./script/main.js"></script>
@@ -205,9 +208,13 @@
     <section id="contactSection" class="wholeScreen">
       <h1>Contact</h1>
 
-      <input type="text" placeholder="email" id="email" maxlength="80">
+      <input type="text" placeholder="your email address" id="email" maxlength="80">
       <input type="text" placeholder="subject" id="subject" maxlength="80">
-      <textarea id="message" placeholder="message" rows="15" maxlength="5000"></textarea>
+      <textarea id="message" placeholder="message" rows="10" maxlength="5000"></textarea>
+
+      <form action="#" method="POST">
+        <div class="g-recaptcha" data-callback="recaptchaCompleted" data-sitekey="6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy"></div>
+      </form>
 
       <div id="buttonWrapper">
         <p id="errorEmail"> &nbsp; </p>
