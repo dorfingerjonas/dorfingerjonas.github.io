@@ -21,6 +21,7 @@
     width: 37vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     user-select: none;
 }
 
@@ -47,4 +48,13 @@
     padding: .5rem .8rem;
     box-shadow: 1px 1px 9px 0px #dbdbdb;
     cursor: pointer;
+}
+
+#contactSection form div {
+    width: 37vw;
+    margin: 0 0 1vh 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
 }
