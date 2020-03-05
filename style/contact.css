@@ -1,0 +1,50 @@
+#email, #subject, #message {
+    width: 35vw;
+    margin: 3vh 0;
+    padding: 1vw;
+    box-shadow: 1px 1px 9px 0px #dbdbdb;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 300ms ease-in-out;
+}
+
+#email:focus, #subject:focus, #message:focus {
+    border-color: #03a87c;
+}
+
+#buttonWrapper {
+    width: 37vw;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#buttonWrapper p {
+    margin: 0;
+}
+
+#errorEmail {
+    color: red;
+}
+
+.errorInput {
+    border-color: red !important;
+}
+
+.errorInput:focus {
+    border-color: red !important;
+}
+
+#contactSection .button {
+    color: #fff;
+    background: #03a87c;
+    border-radius: 7px;
+    padding: .5rem .8rem;
+    box-shadow: 1px 1px 9px 0px #dbdbdb;
+    cursor: pointer;
+}
