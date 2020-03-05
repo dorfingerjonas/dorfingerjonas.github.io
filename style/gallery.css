@@ -48,7 +48,6 @@
 #slideshowImages {
     width: 210vw;
     position: absolute;
-    left: -70vw;
     display: flex;
     justify-content: flex-start;
     align-content: center;
@@ -58,6 +57,7 @@
     width: 45vw;
     margin: 0 12.5vw;
     border-radius: 3px;
+    transition: left 300ms ease-in-out;
 }
 
 #slideshowImages .panorama {
