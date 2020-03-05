@@ -1,0 +1,22 @@
+#skillWrapper {
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 20vw;
+    flex-direction: column;
+    margin: 2.5vh 5vw;
+}
+
+.skill .skillHeadline {
+    text-align: center;
+}
+
+.skill .skillHeadline i {
+    font-size: 2.3vw;
+    color: #03a87c;
+}

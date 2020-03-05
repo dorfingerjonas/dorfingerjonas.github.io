@@ -2,6 +2,7 @@ body {
     width: 100vw;
     margin: 0 auto;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hide {
@@ -10,4 +11,52 @@ body {
 
 .overflowHidden {
     overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    min-height: 20vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wholeScreen {
+    min-height: 100vh;
+}
+
+#homeSection {
+    background-image: url("../img/background.jpg");
+    background-attachment: fixed;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#homeSection h1 {
+    font-size: 4vw;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#homeSection p {
+    color: #fff;
+    margin: 0;
+    font-size: 1.5vw;
+}
+
+.buttonWrapper {
+    width: 84vw;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.showMoreButton {
+    color: cornflowerblue;
+    text-decoration: underline;
+    cursor: pointer;
 }

@@ -1,205 +1,119 @@
-const howManyImages = 22;
-let currentImage = 1;
+const howManyImages = 21;
+let imageIndex = 0;
 
 window.addEventListener('load', () => {
-  const closeSlideshow = document.querySelector('#closeSlideshow');
-  const slideshowWrapper = document.getElementById('slideshow');
-  const imageWrapper = document.getElementById('slideshowImages');
-  const nextImage = document.getElementById('nextImage');
-  const previousImage = document.getElementById('previousImage');
-  const disableSlideshow = document.getElementById('disableSlideshow');
+    const imageWrapper = document.querySelector('#images');
+    const slideshowImages = document.querySelector('#slideshowImages');
+    const slideshowWrapper = document.getElementById('slideshowWrapper');
+    const disableSlideshow = document.getElementById('disableSlideshow');
+    const previousImage = document.getElementById('previousImageBtn');
+    const slideShowImage = document.getElementById('slideShowImage');
+    const nextImage = document.getElementById('nextImageBtn');
+    const close = document.getElementById('close');
+    const width = 70;
+    let newRow = document.createElement('div');
+    let rowCounter = 0;
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBd4ZNQRImSA-DLkRuQUShh8jqH-L9DVJM",
-    authDomain: "jonas-dorfinger.firebaseapp.com",
-    databaseURL: "https://jonas-dorfinger.firebaseio.com",
-    projectId: "jonas-dorfinger",
-    storageBucket: "jonas-dorfinger.appspot.com",
-    messagingSenderId: "47344971189",
-    appId: "1:47344971189:web:7dd58623493ae508"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-  printImages();
-
-  closeSlideshow.addEventListener('click', () => {
-    slideshowWrapper.style.opacity = 0;
-    imageWrapper.style.transform = 'scale(0.6)';
-    disableSlideshow.classList.add('hide');
-    document.body.classList.remove('overflowHidden');
-
-    setTimeout(() => {
-      slideshowWrapper.classList.add('hide');
-    }, 310);
-  });
-
-  disableSlideshow.addEventListener('click', () => {
-    closeSlideshow.click();
-  });
-
-  nextImage.addEventListener('click', () => {
-    currentImage++;
-
-    if (currentImage === howManyImages + 1) {
-      currentImage = 1;
-    }
-
-    document.getElementById('currentImage').src = `../img/gallery/gallery (${currentImage}).jpg`;
-  });
-
-  previousImage.addEventListener('click', () => {
-    currentImage--;
-
-    if (currentImage === 0) {
-      currentImage = howManyImages;
-    }
-
-    document.getElementById('currentImage').src = `../img/gallery/gallery (${currentImage}).jpg`;
-  });
-});
-
-window.addEventListener('resize', () => {
-  initButtonWrapper();  
-});
-
-function printImages() {
-  const contentSlideshowWrapper = document.querySelector('#images');
-  let newRow = document.createElement('div');
-  let rowCounter = 0;
-
-  for (let i = 0; i < howManyImages; i++) {
-    const newImage = document.createElement('img');
-
-    newImage.src = `../img/gallery/gallery (${i+1}).jpg`;
-    newImage.alt = 'cannot display image';
-
-    if (i !== 15) newImage.classList.add('image');
-    else newImage.classList.add('panorama');
-
-    newImage.addEventListener('click', () => {
-      const slideshowWrapper = document.getElementById('slideshow');
-      const imageWrapper = document.getElementById('slideshowImages');
-      slideshowWrapper.classList.remove('hide');
-
-      currentImage = i + 1;
-      
-      document.getElementById('currentImage').src = `../img/gallery/gallery (${i+1}).jpg`;
-
-      initButtonWrapper();
-
-      disableSlideshow.classList.remove('hide');
-      document.body.classList.add('overflowHidden');
-      
-      setTimeout(() => {
-        slideshowWrapper.style.opacity = 1;
-        imageWrapper.style.transform = 'scale(1)';
-      }, 10);
-    });
-    
-    newRow.appendChild(newImage);
-    
-    rowCounter++;
-    
-    if (((rowCounter) % 3 === 0 || i === 15) && window.innerWidth >= 1160) {
-      contentSlideshowWrapper.appendChild(newRow);
-      newRow = document.createElement('div');
-      rowCounter = 0;
-    } else if (window.innerWidth < 1160) {
-      contentSlideshowWrapper.appendChild(newImage);
-    }
-  }
-}
-
-function initButtonWrapper() {
-  const buttonWrapper = document.getElementsByClassName('buttonWrapper');  
-  
-  for (const wrapper of buttonWrapper) {
-    wrapper.style.height = document.getElementById('currentImage').clientHeight + 'px';
-  }
-}
-
-function getPaths() {
-  const storage = firebase.storage();
-  const storageRef = storage.ref();
-  const directory = storageRef.child('gallery');
-  const paths = [];
-
-  directory.listAll().then((res) => {
-    for (const image of res['items']) {
-      const imagesRef = storageRef.child(image.fullPath);
-      
-      imagesRef.getDownloadURL().then((url) => {
-        paths.push(url);
-
-        if (paths.length >= 2) {
-          for (let i = 0; i < paths.length; i++) {
-            for (let j = i; j < paths.length; j++) {
-              console.log(paths);
-              
-              let path1 = paths[i].location.path;
-              let path2 = paths[j].location.path;
-              
-              let parts = path1.split('(');
-              parts = parts[1].split(')');
-              path1 = parseInt(parts[0]);
-              
-              parts = path2.split('(');
-              parts = parts[1].split(')');
-              path2 = parseInt(parts[0]);
-        
-              console.log(path1);
-              console.log(path2);
-              
-              if (path1 > path2) {
-                const temp = paths[i];
-                paths[i] = paths[j];
-                paths[j] = temp;
-              }
-            }
-          }
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight')  {
+            nextImage.click();
+        } else if (event.key === 'ArrowLeft') {
+            previousImage.click();
         }
-        // const newImage = document.createElement('img');
+    });
 
-        // newImage.src = url;
-        // newImage.alt = 'cannot display image';
+    // nextImage.addEventListener('click', () => {
+    //     if (parseInt(slideshowImages.style.left) - width >= (howManyImages - 1) * (width * (-1))) {
+    //         slideshowImages.style.left = `-${width}vw`;
 
-        // newImage.classList.add('image');
+    //         setTimeout(() => {
+    //             slideshowImages.style.opacity = 0;
+    //             slideshowImages.style.transition = 'none';
+    //             slideshowImages.style.left = `${width}vw`;
+
+    //             imageIndex === howManyImages ? imageIndex = 1 : imageIndex++;
+    //             slideShowImage.src = `../img/gallery/gallery (${imageIndex}).jpg`;
+                
+                
+    //             setTimeout(() => {
+    //                 slideshowImages.style.opacity = 1;
+    //                 slideshowImages.style.transition = 'left 500ms ease-in-out';
+
+    //                 setTimeout(() => {
+    //                     slideshowImages.style.left = 0;
+    //                 }, 5);
+    //             }, 5);
+    //         }, 505);
+
+
+    //     }
+    // });
+
+    previousImage.addEventListener('click', () => {
+        if (parseInt(slideshowImages.style.left) + width <= 0) {
+            slideshowImages.style.left = `${parseInt(slideshowImages.style.left) + width}vw`;
+        }
+    });
+
+    close.addEventListener('click', () => {
+        disableSlideshow.click();
+    });
+
+    disableSlideshow.addEventListener('click', () => {
+        slideshowWrapper.style.opacity = 0; 
+        slideshowWrapper.style.transform = 'scale(1.3)'; 
+
+        setTimeout(() => {
+            slideshowImages.style.transition = 'none';
+            slideshowWrapper.classList.add('hide');
+            disableSlideshow.classList.add('hide');
+            document.body.classList.remove('overflowHidden');
+        }, 260);
+    });
+
+    for (let i = 0; i < howManyImages; i++) {
+        const newImage = document.createElement('img');
+
+        newImage.src = `../img/gallery/gallery (${i+1}).jpg`;
+        newImage.alt = 'cannot display image';
+
+        if (i !== 12) {
+            newImage.classList.add('image');  
+        } else {
+            newImage.classList.add('panorama');
+        }
 
         // newImage.addEventListener('click', () => {
-        //   const slideshowWrapper = document.getElementById('slideshow');
-        //   const imageWrapper = document.getElementById('slideshowImages');
-        //   slideshowWrapper.classList.remove('hide');
+        //     slideshowWrapper.classList.remove('hide');
+        //     disableSlideshow.classList.remove('hide');
+        //     document.body.classList.add('overflowHidden');
 
-        //   currentImage = i + 1;
-          
-        //   document.getElementById('currentImage').src = url;
+        //     slideShowImage.src = `../img/gallery/gallery (${i+1}).jpg`;
 
-        //   initButtonWrapper();
-          
-        //   setTimeout(() => {
-        //     slideshowWrapper.style.opacity = 1;
-        //     imageWrapper.style.transform = 'scale(1)';
-        //   }, 10);
+        //     imageIndex = i + 1;
+
+        //     setTimeout(() => {
+        //         slideshowWrapper.style.opacity = 1; 
+        //         slideshowWrapper.style.transform = 'scale(1)';
+        //     }, 10);
+
+        //     setTimeout(() => {
+        //         slideshowImages.style.transition = 'left 500ms ease-in-out';
+        //     }, 200);
         // });
         
-        // newRow.appendChild(newImage);
-        
-        // rowCounter++;
-        
-        // if ((rowCounter) % 3 === 0) {
-        //   contentSlideshowWrapper.appendChild(newRow);
-        //   newRow = document.createElement('div');
-        //   rowCounter = 0;
-        // }
-        console.log(paths.length);
-      });
+        newRow.appendChild(newImage);
 
-      // i++; 
+        if (i > 11) {
+            newRow.classList.add('hide');
+        }
+        
+        rowCounter++;
+        
+        if (((rowCounter) % 4 === 0 || i === 12)) {
+            imageWrapper.appendChild(newRow);
+            newRow = document.createElement('div');
+            rowCounter = 0;
+        }
     }
-  });
-
-  console.log(paths);
-
-  return paths;
-}
+});
