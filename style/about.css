@@ -1,0 +1,21 @@
+#aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 15vh 0 0 5vw;
+}
+
+.partOfAbout {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#aboutContent img {
+    width: 35%;
+    border-radius: 3px;
+    box-shadow: 1px 1px 9px 0px #dbdbdb;
+}
