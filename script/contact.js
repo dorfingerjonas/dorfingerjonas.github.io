@@ -1,4 +1,5 @@
 let reCaptchaCorrect = false;
+let tempToken = '';
 
 window.addEventListener('load', () => {
     const email = document.getElementById('email');
@@ -64,7 +65,8 @@ window.addEventListener('load', () => {
             firebase.database().ref('public/email/' + new Date().getTime()).set({
                 message: message.value,
                 email: email.value,
-                subject: subject.value
+                subject: subject.value,
+                token: tempToken
             }).then(() => {
                 email.value = '';
                 subject.value = '';
@@ -86,6 +88,12 @@ function validateEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-function recaptchaCompleted() {
+function recaptchaCompleted(token) {
+    tempToken = grecaptcha.getResponse();
+    
     reCaptchaCorrect = true;
+
+    setTimeout(() => {
+        reCaptchaCorrect = false;
+    }, 120000);
 }
