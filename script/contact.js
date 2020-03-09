@@ -78,6 +78,7 @@ window.addEventListener('load', () => {
                 setTimeout(() => {
                     errorEmail.innerHTML = '&nbsp;';
                     errorEmail.style.color = 'red';
+                    grecaptcha.reset();
                 }, 3500);
             });
         }
