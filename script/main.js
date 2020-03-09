@@ -1,31 +1,27 @@
 window.addEventListener('load', () => {
-    const showMoreWorkButton = document.getElementById('showMoreWorkButton');
     const showMoreImagesButton = document.getElementById('showMoreImagesButton');
-    showMoreWorkButton.showMore = true;
+    const workWrapper = document.getElementById('workWrapper');
+    const currentWorkPart = document.getElementsByClassName('currentWorkPart');
+    let width = parseInt(workWrapper.style.left);
+    let interval;
+    let isFirstPageActive = true;
     showMoreImagesButton.showMore = true;
 
     AOS.init();
+    createInterval();
 
-    showMoreWorkButton.addEventListener('click', () => {
-        if (showMoreWorkButton.showMore) {
-            const entries = document.getElementsByClassName('work');
+    currentWorkPart[0].addEventListener('click', () => {
+        workWrapper.style.left = `${width}vw`;
+        currentWorkPart[0].style.background = 'lightgray';
+        currentWorkPart[1].style.background = 'white';
+        createInterval();
+    });
 
-            for (const entry of entries) {
-                entry.classList.remove('hide');
-            }
-
-            showMoreWorkButton.textContent = 'show less';
-        } else {
-            const entries = document.getElementsByClassName('work');
-            
-            for (let i = 3; i < entries.length; i++) {
-                entries[i].classList.add('hide');
-            }
-
-            showMoreWorkButton.textContent = 'show more';
-        }
-
-        showMoreWorkButton.showMore = !showMoreWorkButton.showMore;
+    currentWorkPart[1].addEventListener('click', () => {
+        workWrapper.style.left = `-${width}vw`;
+        currentWorkPart[0].style.background = 'white';
+        currentWorkPart[1].style.background = 'lightgray';
+        createInterval();
     });
 
     
@@ -48,4 +44,18 @@ window.addEventListener('load', () => {
 
         showMoreImagesButton.showMore = !showMoreImagesButton.showMore;
     });
+    
+    function createInterval() {
+        clearInterval(interval);
+
+        isFirstPageActive = !isFirstPageActive;
+
+        interval = setInterval(() => {
+            if (isFirstPageActive) {
+                currentWorkPart[1].click();
+            } else {
+                currentWorkPart[0].click();
+            }
+        }, 15000);
+    }
 });
