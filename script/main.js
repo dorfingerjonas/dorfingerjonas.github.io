@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
     const showMoreImagesButton = document.getElementById('showMoreImagesButton');
     const workWrapper = document.getElementById('workWrapper');
     const currentWorkPart = document.getElementsByClassName('currentWorkPart');
-    let width = parseInt(workWrapper.style.left);
+    let width = 50;
     let interval;
     let isFirstPageActive = true;
     showMoreImagesButton.showMore = true;
