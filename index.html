@@ -9,8 +9,9 @@
     <meta name="theme-color" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/nav.css">
+    <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/work.css">
     <link rel="stylesheet" href="./style/about.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -27,14 +28,23 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Script Files -->
     <script src="./script/nav.js"></script>
+    <script src="./script/menu.js"></script>
     <script src="./script/main.js"></script>
     <script src="./script/gallery.js"></script>
     <script src="./script/contact.js"></script>
   </head>
   <body>
+    <div id="burgerBar">
+      <div id="menuWrapper">
+        <div class="bar" id="barOne"></div>
+        <div class="bar" id="barTwo"></div>
+        <div class="bar" id="barThree"></div>
+      </div>
+    </div>
+
     <nav>
       <span>Jonas Dorfinger</span>
-      
+
       <ul>
         <li id="homeNav">Home</li>
         <li id="aboutNav">About</li>
@@ -43,6 +53,8 @@
         <li id="galleryNav">Gallery</li>
         <li id="contactNav">Contact</li>
       </ul>
+
+      <p id="navCopyright">© Copyright by Jonas Dorfinger, 2020. All rights reserved.</p>
     </nav>
 
     <section id="homeSection" class="wholeScreen" data-depth="0.6">
@@ -59,13 +71,13 @@
           <p>No matter what I am doing, I always take my camera with me, especially when we go hiking or cycling. Photography and Videography are big passions of myself. You can see some pictures I took in my gallery. When it's winter, I go skiing with my family and friends nearly every weekend.</p>
           <p>Through my education, I discovered Web-Design and Web-Technologies as my biggest hobbies. I am convinced, that learning by doing is the best way to learn something, through this method I learned a lot of opportunities how you can structure a web-app, making it responsive and good looking.</p>
         </div>
-        
+
         <div class="partOfAbout">
           <img src="./img/portrait.jpg" alt="cannot display image">
         </div>
       </div>
     </section>
-    
+
     <section id="skillsSection" class="wholeScreen">
       <h1>Skills</h1>
 
@@ -123,70 +135,70 @@
     <section id="workSection" class="wholeScreen">
       <h1>Work</h1>
 
-      <div id="workWrapper" style="left: 50vw;">
+      <div id="workWrapper">
         <div class="workPart">
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/TicTacToe.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>Tic Tac Toe</h1>
               <p>Tic Tac Toe is a well-known game, I decided to create my own game, three gamemodes to make the game more attractive. You are able to play the game alone against a bot (gamemode in progress), you can play online with your friend in realtime. It's also possible to play TicTacToe on one device with two people. This game is only a fun project in my leisure time, I wanted to use this project to learn more about online game development an database-client communication.  <a href="https://dorfingerjonas.github.io/TicTacToe/">Website</a><i class="fas fa-arrow-right"></i></p>
             </div>
           </div>
-  
+
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/SchuldnersListe.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>Schuldners Liste</h1>
               <p>Schuldners Liste is a mobile application made with web technologies. The app is used to help you to keep in mind which persons have debts to you. You have the opportunity to restore deleted entries, this is useful for example if you have deleted the wrong entry. The user of the app can choose his theme. There are several predefined themes from which the user can select his current theme. It is planned that it should be possible to have the themes created by users individually.  <a href="https://schuldners-liste.github.io/">Website</a><i class="fas fa-arrow-right"></i></p>
             </div>
           </div>
-  
+
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/HTLDirAv.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>HTL-Dir-Av</h1>
               <p>HTL-Dir-Av is a website for all principals and heads of departments from higher technical schools in Austria. As part of the semester project in the 11th grade, this project was developed in cooperation with the association. The benefit of this page is, that the club members can upload files and share them. Another feature is the comment functionality, they can start discussions. I have been chosen as the project manager of the three-man team, all of them are colleagues of me. <a href="https://htldirav.net/">Website</a><i class="fas fa-arrow-right"></i></p>
             </div>
           </div>
         </div>
-        
+
         <div class="workPart">
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/calendar.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>Calendar</h1>
               <p>I have created my own calendar, inspired by the Google Calendar. I focused my work on the functionality of the application. "Calendar" was a learning by doing project for me. Before the app, I had nearly no clue about using Date and Time in JavaScript, to improve my knowledge I decided to create my own calendar. It all began with a school exercise in Web development, but I was not happy with the calendar, I wanted to it better and more efficient than my classmates.  <a href="https://github.com/dorfingerjonas/calendar/">Repository</a><i class="fas fa-arrow-right"></i></p>
             </div>
           </div>
-  
+
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/OrderSystem.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>Ordersystem</h1>
               <p>Ordersystem is a mobile app for waiters. In an organization-group for a big event each autumn we had a challenge that we had to deal with. The obstacle was, that the visitors at our event appeared at the same time, around 600 people wanted their food and drinks immediately. Every waiter has the app on his mobile phone and sends the order directly to the kitchen, there, some volunteers prepared the food. Other waiters served the food and drinks to the visitor. <a href="https://github.com/dorfingerjonas/ordersystem/">Repository</a><i class="fas fa-arrow-right"></i></p>
             </div>
           </div>
-  
+
           <div class="work">
             <div class="workHeader">
               <img src="./img/work/DesignDictionary.jpg" alt="cannot display image">
             </div>
-  
+
             <div class="workBody">
               <h1>Design Dictionary</h1>
               <p>Design Dictionary is a website made for developers. It provides a collection of, in my opinion, good looking colors. Some friends a sending me colors which they think are looking good. Design Dictionary was created in the summer of 2019. I struggled when selecting my colors for Ordersystem, and decided to create this page, for me, but also for others to help them. If you have some nice colors, it would be a great pleasure for me to add your color to the collection as well. <a href="https://design-dictionary.github.io/">Website</a><i class="fas fa-arrow-right"></i></p>
@@ -229,9 +241,11 @@
       <input type="text" placeholder="subject" id="subject" maxlength="80">
       <textarea id="message" placeholder="message" rows="10" maxlength="5000"></textarea>
 
-      <form action="#" method="POST">
-        <div class="g-recaptcha" data-callback="recaptchaCompleted" data-sitekey="6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy"></div>
-      </form>
+      <div class="reCaptchaWrapper">
+        <form action="#" method="POST">
+          <div class="g-recaptcha" data-callback="recaptchaCompleted" data-sitekey="6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy"></div>
+        </form>
+      </div>
 
       <div id="buttonWrapper">
         <p id="errorEmail"> &nbsp; </p>

@@ -7,7 +7,7 @@
 }
 
 .workPart {
-    width: 100vw;
+    width: 94vw;
     padding: 0 3vw;
     display: flex;
     justify-content: space-evenly;
@@ -74,4 +74,39 @@
 
 .currentWorkPart:nth-child(1) {
     background: lightgray;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #workWrapper {
+        width: 100vw;
+        flex-direction: column;
+        transition: none;
+        left: 0;
+    }
+
+    #workButtonWrapper {
+        display: none;
+    }
+
+    .work {
+        width: 65vw;
+        margin: 2vh 0;
+    }
+
+    .workPart {
+        flex-direction: column;
+    }
+
+    .workBody h1 {
+        margin-top: 0.4em;
+        font-size: 6vw;
+    }
+
+    .workBody a {
+        margin-right: 1.5vw;
+    }
+
+    .workBody a:hover {
+        margin-right: 1.5vw;
+    }
 }

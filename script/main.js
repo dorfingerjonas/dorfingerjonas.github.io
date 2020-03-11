@@ -2,13 +2,30 @@ window.addEventListener('load', () => {
     const showMoreImagesButton = document.getElementById('showMoreImagesButton');
     const workWrapper = document.getElementById('workWrapper');
     const currentWorkPart = document.getElementsByClassName('currentWorkPart');
-    let width = parseInt(workWrapper.style.left);
+    let width = 50;
     let interval;
     let isFirstPageActive = true;
     showMoreImagesButton.showMore = true;
 
     AOS.init();
-    createInterval();
+    
+    if (outerWidth > outerHeight) {
+        createInterval();
+        workWrapper.style.left = `${width}vw`;
+    } else {
+        workWrapper.style.left = 0;
+    }
+
+    window.addEventListener('resize', () => {
+        if (outerWidth < outerHeight) {
+            clearInterval(interval);
+            workWrapper.style.left = 0;
+
+            console.log(document.getElementsByTagName('nav')[0].clientLeft);
+        } else {
+            document.body.classList.remove('overflowHidden');
+        }
+    });
 
     currentWorkPart[0].addEventListener('click', () => {
         workWrapper.style.left = `${width}vw`;
