@@ -58,3 +58,25 @@
     align-items: center;
     user-select: none;
 }
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #email, #subject, #message {
+        width: 70vw;
+        padding: 2vw;
+    }
+
+    #buttonWrapper {
+        width: 70vw;
+        flex-direction: column-reverse;
+    }
+
+    #buttonWrapper .button {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    #contactSection form div {
+        width: auto;
+    }
+}
