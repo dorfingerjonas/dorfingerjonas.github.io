@@ -8,7 +8,14 @@ window.addEventListener('load', () => {
     showMoreImagesButton.showMore = true;
 
     AOS.init();
-    createInterval();
+    
+    if (outerWidth > outerHeight) {
+        createInterval();
+        workWrapper.style.left = `${width}vw`;
+    } else {
+        workWrapper.style.left = 0;
+    }
+
     window.addEventListener('resize', () => {
         if (outerWidth < outerHeight) {
             clearInterval(interval);
