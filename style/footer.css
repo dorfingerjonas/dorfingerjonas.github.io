@@ -54,3 +54,35 @@ footer {
 .footerRow a:hover {
     color: darkgray;
 }
+
+@media screen and (max-aspect-ratio: 1/1) {
+    footer {
+        height: 35vh;
+    }
+
+    #iconBox {
+        width: 80vw;
+    }
+
+    #iconBox a {
+        height: 9vw;
+        width: 9vw;
+        font-size: 5vw;
+    }
+
+    .footerRow p {
+        margin: 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .footerRow p:nth-child(2) {
+        width: 100%;
+        margin-top: 1.5vh;
+        font-size: 3vw;
+    }
+
+    .footerRow {
+        flex-direction: column-reverse;
+    }
+}
