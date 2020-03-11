@@ -20,3 +20,18 @@
     font-size: 2.3vw;
     color: #03a87c;
 }
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #skillWrapper {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 75%;
+    }
+
+    .skill .skillHeadline i {
+        font-size: 9vw;
+    }
+}
