@@ -19,3 +19,18 @@
     border-radius: 3px;
     box-shadow: 1px 1px 9px 0px #dbdbdb;
 }
+
+@media screen and (max-aspect-ratio: 1/1) {
+    #aboutContent {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+    
+    .partOfAbout {
+        width: 80vw;
+    }
+
+    #aboutContent img {
+        width: 50%;
+    }
+}
