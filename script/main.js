@@ -9,6 +9,16 @@ window.addEventListener('load', () => {
 
     AOS.init();
     createInterval();
+    window.addEventListener('resize', () => {
+        if (outerWidth < outerHeight) {
+            clearInterval(interval);
+            workWrapper.style.left = 0;
+
+            console.log(document.getElementsByTagName('nav')[0].clientLeft);
+        } else {
+            document.body.classList.remove('overflowHidden');
+        }
+    });
 
     currentWorkPart[0].addEventListener('click', () => {
         workWrapper.style.left = `${width}vw`;
