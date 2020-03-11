@@ -241,9 +241,11 @@
       <input type="text" placeholder="subject" id="subject" maxlength="80">
       <textarea id="message" placeholder="message" rows="10" maxlength="5000"></textarea>
 
-      <form action="#" method="POST">
-        <div class="g-recaptcha" data-callback="recaptchaCompleted" data-sitekey="6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy"></div>
-      </form>
+      <div class="reCaptchaWrapper">
+        <form action="#" method="POST">
+          <div class="g-recaptcha" data-callback="recaptchaCompleted" data-sitekey="6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy"></div>
+        </form>
+      </div>
 
       <div id="buttonWrapper">
         <p id="errorEmail"> &nbsp; </p>
