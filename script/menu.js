@@ -1,6 +1,5 @@
 window.addEventListener('load', () => {
     const menuWrapperOne = document.getElementById('menuWrapper');
-    const disableNav = document.getElementById('disableNav');
     const nav = document.getElementsByTagName('nav')[0];
   
     menuWrapperOne.addEventListener('click', () => {
