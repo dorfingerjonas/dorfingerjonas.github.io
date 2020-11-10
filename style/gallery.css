@@ -5,45 +5,31 @@
 
 #images {
     width: 80vw;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
-#images div {
-    width: 100%;
-    margin:  1vh 0 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
+#images .column {
+    width: 20vw;
+    margin-right: 1.45rem;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
 }
 
 #images img {
-    width: 19.5vw;
-}
-
-#images .panorama {
     width: 100%;
+    margin-bottom: 1.45rem;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
-    #images div {
-        margin: 0;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+    #images {
+        flex-direction: column;
     }
 
-    #images img {
-        width: 80vw;
-        margin: 1vh 0;
+    #images .column {
+        width: 100%;
     }
 }
