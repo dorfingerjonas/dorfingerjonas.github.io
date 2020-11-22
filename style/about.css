@@ -33,7 +33,7 @@
 }
 
 #aboutContent img {
-    width: 35%;
+    width: 80%;
     border-radius: 3px;
     -webkit-box-shadow: 1px 1px 9px 0px #dbdbdb;
             box-shadow: 1px 1px 9px 0px #dbdbdb;
@@ -53,6 +53,6 @@
     }
 
     #aboutContent img {
-        width: 50%;
+        width: 100%;
     }
 }
