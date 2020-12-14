@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+{{ $data := index site.Data.homepage }}
+
+{{ if $data.enable }}
+{{ with $data }}
+
+<h1>{{ .name }}</h1>
+
+{{end}}
+{{end}}
+{{end}}
