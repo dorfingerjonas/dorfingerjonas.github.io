@@ -8,6 +8,7 @@ burger:
 
     - id: 'barThree'
 
+
 ##### Navigation #####
 nav:
   enable: true
@@ -32,3 +33,21 @@ nav:
       text: "Contact"
 
   copyright: "© Copyright by Jonas Dorfinger, 2020. All rights reserved."
+
+
+##### HomeSection #####
+homeSection:
+  enable: true
+  id: "homeSection"
+  className: "wholeScreen"
+  depth: "0.6"
+  name:
+    text: "Jonas Dorfinger"
+    aos: "fade-down"
+    aosDuration: "1400"
+    aosEasing: "ease-out"
+  description:
+    text: "Developer. Photographer."
+    aos: "fade-down"
+    aosDuration: "1400"
+    aosEasing: "ease-out"
