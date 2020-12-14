@@ -41,4 +41,21 @@
 {{end}}
 
 <!-- Navigation - End -->
+
+
+<!-- HomeSection -->
+
+{{ if $data.homeSection.enable}}
+{{ with $data.homeSection }}
+
+<section id='{{ .id }}' class='{{ .className }}' data-depth='{{ .depth }}'>
+    <h1 data-aos='{{ .name.aos }}' data-aos-duration='{{ .name.aosDuration }}' data-aos-easing='{{ .name.aosEasing }}'>{{ .name.text }}</h1>
+    <p data-aos='{{ .description.aos }}' data-aos-duration='{{ .description.aosDuration }}' data-aos-easing='{{ .description.aosEasing }}'>{{ .description.text }}</p>
+</section>
+
+{{ end }}
+{{ end }}
+
+<!-- HomeSection - End -->
+
 {{end}}
