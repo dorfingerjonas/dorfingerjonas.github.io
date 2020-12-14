@@ -1,7 +1,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{"<!-- CSS Files -->" | safeHTML}}
     {{ $styles := resources.Get "style/style.scss" | toCSS | minify }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    {{ "<!-- Libraries -->" | safeHTML}}
+    <script src='https://kit.fontawesome.com/e7df220bd7.js' crossorigin='anonymous'></script>
     <title>{{ $.Site.Title }}</title>
 </head>
