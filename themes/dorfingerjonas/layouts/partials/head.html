@@ -4,7 +4,9 @@
     {{"<!-- CSS Files -->" | safeHTML}}
     {{ $styles := resources.Get "style/style.scss" | toCSS | minify }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap' rel='stylesheet'>
     {{ "<!-- Libraries -->" | safeHTML}}
     <script src='https://kit.fontawesome.com/e7df220bd7.js' crossorigin='anonymous'></script>
+    <script src='https://unpkg.com/aos@next/dist/aos.js'></script>
     <title>{{ $.Site.Title }}</title>
 </head>
