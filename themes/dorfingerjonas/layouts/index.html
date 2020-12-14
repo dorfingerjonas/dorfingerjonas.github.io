@@ -1,6 +1,27 @@
 {{ define "main" }}
 
+<!-- Burger -->
+
 {{ $data := index site.Data.homepage }}
+{{ if $data.burger.enable}}
+{{ with $data.burger }}
+
+<div id='burgerBar'>
+    <div id='menuWrapper'>
+      {{ range .ids }}
+      <div class='bar' id='{{ .id }}'></div>
+      {{ end }}
+    </div>
+</div>
+
+{{ end }}
+{{ end }}
+
+<!-- Burger-End -->
+
+
+<!-- Navigation -->
+
 {{ if $data.nav.enable}}
 {{ with $data.nav }}
 
@@ -18,4 +39,6 @@
 
 {{end}}
 {{end}}
+
+<!-- Navigation-End -->
 {{end}}
