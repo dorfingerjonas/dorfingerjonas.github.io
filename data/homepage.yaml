@@ -1,0 +1,24 @@
+##### Navigation #####
+nav:
+  enable: true
+  name: "Jonas Dorfinger"
+  items:
+    - id: "homeNav"
+      text: "Home"
+
+    - id: "aboutNav"
+      text: "About"
+
+    - id: "skillsNav"
+      text: "Skills"
+
+    - id: "workNav"
+      text: "Work"
+
+    - id: "galleryNav"
+      text: "Gallery"
+
+    - id: "contactNav"
+      text: "Contact"
+
+  copyright: "© Copyright by Jonas Dorfinger, 2020. All rights reserved."
