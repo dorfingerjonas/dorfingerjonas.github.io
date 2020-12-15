@@ -16,7 +16,6 @@ icons:
     icon: "fab fa-youtube"
 
 content:
-  placeholder: ""
   copyright: "© Copyright by Jonas Dorfinger, 2020. All rights reserved."
   policy:
     url: "/policy/"
