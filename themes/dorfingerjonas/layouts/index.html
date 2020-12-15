@@ -85,4 +85,31 @@
 
 <!-- AboutSection - End -->
 
+
+<!-- SkillsSection -->
+
+{{ if $data.skillsSection.enable}}
+{{ with $data.skillsSection }}
+
+<section id='{{ .id }}' class='{{ .className }}'>
+    <h1>{{ .name }}</h1>
+
+    <div id='skillWrapper'>
+      {{ range .skills}}
+      <div class='skill'>
+        <div class='skillHeadline'>
+          <i class='{{ .icon }}'></i>
+          <h2>{{ .headline }}</h2>
+        </div>
+        <p>{{ .content }}</p>
+      </div>
+      {{ end }}
+    </div>
+</section>
+
+{{ end }}
+{{ end }}
+
+<!-- SkillsSection - End -->
+
 {{end}}
