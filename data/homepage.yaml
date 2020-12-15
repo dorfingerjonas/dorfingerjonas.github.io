@@ -70,7 +70,7 @@ aboutSection:
     alt: 'Portrait'
 
 
-##### Skills #####
+##### SkillsSection #####
 skillsSection:
   enable: true
   id: 'skillsSection'
