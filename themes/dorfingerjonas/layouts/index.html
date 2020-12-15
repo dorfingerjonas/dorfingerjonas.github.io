@@ -58,4 +58,31 @@
 
 <!-- HomeSection - End -->
 
+
+<!-- AboutSection -->
+
+{{ if $data.aboutSection.enable}}
+{{ with $data.aboutSection }}
+
+<section id='{{ .id }}' class='{{ .className }}'>
+    <h1>{{ .name }}</h1>
+
+    <div id="aboutContent">
+        <div class="partOfAbout">
+            {{ range .paragraphs}}
+            <p>{{ .text }}</p>
+            {{ end }}
+        </div>
+
+        <div class="partOfAbout">
+            <img src="{{ .image.path | absURL }}" alt="{{ .image.alt }}">
+        </div>
+    </div>
+</section>
+
+{{ end }}
+{{ end }}
+
+<!-- AboutSection - End -->
+
 {{end}}
