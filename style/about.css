@@ -37,6 +37,10 @@
     border-radius: 3px;
     -webkit-box-shadow: 1px 1px 9px 0px #dbdbdb;
             box-shadow: 1px 1px 9px 0px #dbdbdb;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 @media screen and (max-aspect-ratio: 1/1) {
