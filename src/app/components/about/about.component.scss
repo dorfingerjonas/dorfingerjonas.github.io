@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 10vh 0 0 5vw;
+
+  img {
+    width: 80%;
+    border-radius: 3px;
+    box-shadow: 1px 1px 9px 0px #dbdbdb;
+    user-select: none;
+  }
+
+  .partOfAbout {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
