@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  width: 100vw;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
