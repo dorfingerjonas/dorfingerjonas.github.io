@@ -1,0 +1,29 @@
+:host {
+  min-height: 5vh !important;
+  justify-content: center;
+  padding: 4vh 0 0 0 !important;
+  margin-bottom: 15vh;
+}
+
+.content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill {
+  width: 20vw;
+  flex-direction: column;
+  margin: 2% 2%;
+
+  .headline {
+    text-align: center;
+
+    i {
+      color: var(--main-color);
+      font-size: 1.4em;
+    }
+  }
+}
