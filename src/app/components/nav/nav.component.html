@@ -1,1 +1,9 @@
-<p>nav works!</p>
+<nav>
+  <span>{{title}}</span>
+
+  <ul>
+    <li *ngFor="let item of items" id="{{item.name | lowercase}}Nav">{{item.name}}</li>
+  </ul>
+
+  <p id='navCopyright'>{{copyright}}</p>
+</nav>
