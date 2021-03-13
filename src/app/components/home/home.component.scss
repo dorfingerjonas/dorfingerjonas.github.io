@@ -1,0 +1,21 @@
+:host {
+  background-image: url('/assets/img/langbathsee.jpg');
+  background-attachment: fixed;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center !important;
+  flex-direction: column !important;
+
+  h1 {
+    font-size: 4vw;
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: #fff;
+    margin: 0;
+    font-size: 1.5vw;
+  }
+}
