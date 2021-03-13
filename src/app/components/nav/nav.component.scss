@@ -1,11 +1,11 @@
-nav {
+:host {
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background: #f2f2f2;
-  color: #353535;
+  background: var(--lightgray);
+  color: var(--black);
   position: fixed;
   top: 0;
   user-select: none;
@@ -50,7 +50,7 @@ nav {
         left: 0;
         width: 100%;
         height: 4px;
-        background: #03a87c;
+        background: var(--main-color);
         content: '';
         opacity: 0;
         transition: opacity 0.3s, transform 0.3s;
