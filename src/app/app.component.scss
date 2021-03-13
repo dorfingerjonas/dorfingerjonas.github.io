@@ -1,14 +1,16 @@
 app-home, app-about {
   width: 100vw;
-  min-height: 90vh;
+  min-height: 45vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding: 2vh 0 5vh 0;
 
-  ::ng-deep {
+::ng-deep {
     h1 {
       font-size: 1.5em;
+      margin: 0;
     }
 
     p {
