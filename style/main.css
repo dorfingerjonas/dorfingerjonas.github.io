@@ -1,0 +1,53 @@
+@import url("https://use.typekit.net/cuq3irz.css");
+
+:root {
+    --primary: #303030;
+    --box-shadow: 1px 1px 9px 0px #dbdbdb;
+    --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.3rem;
+    --font-size-p: 1.2rem;
+}
+
+@media screen and (max-device-width: 600px) {
+    :root {
+        --font-size-h1: 6rem;
+        --font-size-h2: 4rem;
+        --font-size-h3: 2.5rem;
+        --font-size-p: 2rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+body {
+    width: 100vw;
+    margin: 0 auto;
+    overflow: hidden scroll;
+    font-family: europa, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

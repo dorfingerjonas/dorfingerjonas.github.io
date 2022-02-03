@@ -1,0 +1,147 @@
+#work-wrapper {
+    margin-top: 15vh;
+    justify-content: flex-start;
+    background: #fff;
+}
+
+.work-content-wrapper {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#work-wrapper > h3 > a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+#work-wrapper h2 {
+    font-family: eurostile, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+#work-wrapper > h3 {
+    font-weight: 100;
+    font-size: var(--font-size-h3);
+}
+
+.work {
+    width: 50%;
+}
+
+.work figure figcaption h3 {
+    font-family: eurostile, sans-serif;
+    font-size: var(--font-size-h2);
+    margin: 0 0 15px 0;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+figure:hover .overlay {
+    opacity: .9;
+}
+
+figure:hover img {
+    transform: scale(1.2);
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+.work img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    transform: scale(1.1);
+    transition: transform 250ms ease-in-out;
+}
+
+.work figure figcaption span, .work figure figcaption a {
+    font-size: var(--font-size-p);
+    text-align: center;
+}
+
+.work figcaption a {
+    margin-top: 30px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+    user-select: none;
+}
+
+.work figcaption a:hover {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: var(--primary);
+    transition: opacity 250ms ease-in-out;
+}
+
+figcaption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 250ms ease-in-out;
+}
+
+@media screen and (max-device-width: 600px) {
+    #work-wrapper {
+        height: unset;
+        margin-bottom: 15vh;
+        overflow: hidden;
+    }
+
+    .work-content-wrapper {
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #work-wrapper h2 {
+        font-size: var(--font-size-h2);
+        width: 100%;
+        text-align: center;
+    }
+
+    #work-wrapper > h3, #work-wrapper > h3 > a {
+        width: 90%;
+        text-align: center;
+    }
+
+    .work {
+        width: 100%;
+    }
+
+    .work figure figcaption a {
+        padding: 10px 20px;
+    }
+}
