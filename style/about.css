@@ -1,62 +1,168 @@
-#aboutContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin: 15vh 0 0 5vw;
+#about-wrapper {
+    height: 40vh;
+    padding: 0 15%;
+    box-sizing: border-box;
+    position: relative;
+    background: var(--primary);
+    justify-content: flex-start;
+    color: #fff;
+    z-index: -1;
 }
 
-.partOfAbout {
-    width: 40vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+#about-wrapper h2, .column h2 {
+    font-family: eurostile, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
 }
 
-#aboutContent img {
-    width: 80%;
-    border-radius: 3px;
-    -webkit-box-shadow: 1px 1px 9px 0px #dbdbdb;
-            box-shadow: 1px 1px 9px 0px #dbdbdb;
-    -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+#about-wrapper h2 {
+    margin-bottom: 0;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
-    #aboutContent {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-        margin: 0;
+#about-wrapper p {
+    width: 60%;
+    font-size: var(--font-size-p);
+}
+
+@media screen and (max-device-width: 600px) {
+    #about-wrapper h2, .column h2 {
+        font-size: var(--font-size-h2);
     }
 
-    .partOfAbout {
-        width: 80vw;
-    }
-
-    #aboutContent img {
+    #about-wrapper p {
         width: 100%;
     }
+}
+
+#column-wrapper {
+    width: 60%;
+    height: 75vh;
+    margin: -7% 20% 0 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e7ecf3;
+    background: #fff;
+    color: #303030;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.column {
+    width: 34%;
+    height: 100%;
+    padding: 5% 2%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 2px solid #e7ecf3;
+    overflow: hidden;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.column > div:nth-child(2) {
+    height: 30%;
+}
+
+.column > div:nth-child(3) {
+    height: 20%;
+}
+
+.column > div:nth-child(4) {
+    height: 40%;
+}
+
+.column i {
+    height: 5%;
+    font-size: var(--font-size-h1);
+    margin-bottom: 1em;
+    color: var(--primary);
+}
+
+.column h2, .column h3 {
+    font-size: var(--font-size-h3);
+    margin-bottom: 5%;
+    text-align: center;
+    color: var(--primary);
+}
+
+.column h2 {
+    color: #303030;
+    font-size: var(--font-size-h2);
+    margin-top: 0;
+}
+
+.column p {
+    font-size: var(--font-size-p);
+    text-align: center;
+}
+
+.column div:nth-child(2) p {
+    width: 90%;
+    margin: 0 5%;
+    text-align: center;
+}
+
+@media screen and (max-device-width: 600px) {
+    #column-wrapper {
+        width: 90%;
+        height: unset;
+        margin: -10% 5% 0 5%;
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        border-bottom: 4px solid #e7ecf3;
+        padding: 15% 0;
+    }
+}
+
+.about-top-svg-wrapper {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.about-top-svg-wrapper svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1px);
+    height: 74px;
+}
+
+.about-top-svg-wrapper .shape-fill {
+    fill: var(--primary);
+}
+
+.about-bottom-svg-wrapper {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.about-bottom-svg-wrapper svg {
+    position: relative;
+    display: block;
+    width: calc(164% + 1px);
+    height: 62px;
+}
+
+.about-bottom-svg-wrapper .shape-fill {
+    fill: var(--primary);
 }

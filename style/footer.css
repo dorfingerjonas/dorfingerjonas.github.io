@@ -1,123 +1,84 @@
 footer {
-    width: 100vw;
+    position: relative;
+    width: 100%;
     height: 25vh;
-    background: #353535;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-svg-wrapper {
+    position: absolute;
+    top: -90px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-svg-wrapper svg {
+    position: relative;
+    display: block;
+    width: calc(134% + 1px);
+    height: 92px;
+}
+
+.footer-svg-wrapper .shape-fill {
+    fill: var(--primary);
+}
+
+#icon-wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#icon-wrapper a {
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-#iconBox {
-    width: 25vw;
-    margin: 10vh 0 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-}
-
-#iconBox a {
-    color: white;
-    font-size: 1.7vw;
-    padding: .5vw;
-    border: 2px solid white;
-    border-radius: 100%;
-    height: 2vw;
-    width: 2vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     text-decoration: none;
-    -webkit-transition: background 200ms ease-out, color 200ms ease-out;
-    -o-transition: background 200ms ease-out, color 200ms ease-out;
-    transition: background 200ms ease-out, color 200ms ease-out;
 }
 
-#iconBox a:hover {
-    background: white;
-    color: #353535;
-}
-
-.footerRow {
-    width: 94vw;
-    padding: 0 3vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
+#icon-wrapper a i {
+    width: var(--font-size-h2);
+    height: var(--font-size-h2);
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-h2);
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 150ms ease-in-out;
 }
 
-.footerRow a {
-    color: white;
-    text-decoration: none;
-    -webkit-transition: color 200ms ease-in-out;
-    -o-transition: color 200ms ease-in-out;
-    transition: color 200ms ease-in-out;
+#icon-wrapper a i:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: #fff;
 }
 
-.footerRow a:hover {
-    color: darkgray;
+#copyright {
+    position: absolute;
+    bottom: 4vh;
+    color: #fff;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
-    footer {
-        height: 35vh;
+@media screen and (max-device-width: 600px) {
+    #icon-wrapper {
+        width: 70%;
     }
 
-    #iconBox {
-        width: 80vw;
+    #icon-wrapper a i {
+        width: var(--font-size-h2);
+        height: var(--font-size-h2);
+        font-size: var(--font-size-h3);
     }
 
-    #iconBox a {
-        height: 9vw;
-        width: 9vw;
-        font-size: 5vw;
-    }
-
-    .footerRow p {
-        margin: 0;
-        width: 80%;
-        text-align: center;
-    }
-
-    .footerRow p:nth-child(2) {
-        width: 100%;
-        margin-top: 1.5vh;
-        font-size: 3vw;
-    }
-
-    .footerRow {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+    #copyright {
+        font-size: var(--font-size-p);
     }
 }

@@ -1,99 +1,53 @@
+@import url("https://use.typekit.net/cuq3irz.css");
+
+:root {
+    --primary: #303030;
+    --box-shadow: 1px 1px 9px 0px #dbdbdb;
+    --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.3rem;
+    --font-size-p: 1.2rem;
+}
+
+@media screen and (max-device-width: 600px) {
+    :root {
+        --font-size-h1: 6rem;
+        --font-size-h2: 4rem;
+        --font-size-h3: 2.5rem;
+        --font-size-p: 2rem;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b2b2b2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
 body {
     width: 100vw;
     margin: 0 auto;
-    overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.hide {
-    display: none !important;
-}
-
-.overflowHidden {
-    overflow: hidden;
+    overflow: hidden scroll;
+    font-family: europa, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 section {
     width: 100vw;
-    min-height: 20vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 100vh;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-.wholeScreen {
-    min-height: 100vh;
-}
-
-#homeSection {
-    background-image: url("../img/background.jpg");
-    background-attachment: fixed;
-    background-origin: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-#homeSection h1 {
-    font-size: 4vw;
-    color: #fff;
-    margin-bottom: 0;
-}
-
-#homeSection p {
-    color: #fff;
-    margin: 0;
-    font-size: 1.5vw;
-}
-
-.buttonWrapper {
-    width: 84vw;
-    padding: 0 8vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-}
-
-.showMoreButton {
-    color: cornflowerblue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-@media screen and (max-aspect-ratio: 1/1) {
-    #homeSection h1 {
-        font-size: 10vw;
-    }
-
-    #homeSection p {
-        font-size: 5vw;
-    }
-
-    h1 {
-        font-size: 7vw;
-        margin-top: 8vh;
-    }
-
-    h2 {
-        font-size: 5vw;
-    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

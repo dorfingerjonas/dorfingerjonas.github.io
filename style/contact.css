@@ -1,113 +1,39 @@
-#email, #subject, #message {
-    width: 35vw;
-    margin: 3vh 0;
-    padding: 1vw;
-    -webkit-box-shadow: 1px 1px 9px 0px #dbdbdb;
-            box-shadow: 1px 1px 9px 0px #dbdbdb;
-    background: transparent;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid lightgray;
-    border-radius: 5px;
-    resize: none;
-    -webkit-transition: border-color 300ms ease-in-out;
-    -o-transition: border-color 300ms ease-in-out;
-    transition: border-color 300ms ease-in-out;
-}
-
-#email:focus, #subject:focus, #message:focus {
-    border-color: #03a87c;
-}
-
-#buttonWrapper {
-    width: 37vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
-
-#buttonWrapper p {
-    margin: 0;
-}
-
-#errorEmail {
-    color: red;
-}
-
-.errorInput {
-    border-color: red !important;
-}
-
-.errorInput:focus {
-    border-color: red !important;
-}
-
-#contactSection .button {
-    color: #03a87c;
-    background: #03926c33;
-    border-radius: 7px;
-    padding: .5rem .8rem;
-    -webkit-box-shadow: 1px 1px 9px 0px #dbdbdb;
-            box-shadow: 1px 1px 9px 0px #dbdbdb;
-    cursor: pointer;
-    transition: color 300ms ease-in-out, background 300ms ease-in-out;
-}
-
-#contactSection .button:hover {
-    background: #03a87c;
+#contact-wrapper {
+    width: 40%;
+    background: var(--primary);
     color: #fff;
+    padding: 2rem;
+    margin: 10% 30%;
+    font-size: var(--font-size-h2);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    user-select: none;
 }
 
-#contactSection form div {
-    width: 37vw;
-    margin: 0 0 1vh 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+#contact-wrapper span {
+    margin: 0 5% 0 0;
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
-    #email, #subject, #message {
-        width: 70vw;
-        padding: 2vw;
-    }
+#contact-wrapper a {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    border: 2px solid #fff;
+    transition: all 150ms ease-in-out;
+}
 
-    #buttonWrapper {
-        width: 70vw;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
-    }
+#contact-wrapper a:hover {
+    background: #fff;
+    color: var(--primary);
+}
 
-    #buttonWrapper .button {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 2vh;
-    }
-
-    #contactSection form div {
-        width: auto;
+@media screen and (max-device-width: 600px) {
+    #contact-wrapper {
+        width: 80%;
+        margin: 20% 10%;
+        box-sizing: border-box;
+        font-size: var(--font-size-h3);
     }
 }

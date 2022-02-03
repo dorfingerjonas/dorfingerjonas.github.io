@@ -1,270 +1,403 @@
 <!DOCTYPE html>
-<html lang='en' dir='ltr'>
-  <head>
-    <!-- General -->
-    <title>Jonas Dorfinger</title>
-    <link rel='shortcut icon' href='./img/favicon.ico' type='image/x-icon'>
-    <!-- meta -->
-    <meta charset='utf-8'>
-    <meta name='theme-color' content='#03a87c'>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jonas Dorfinger | Fullstack Developer & Designer</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#303030">
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
-    <meta name='keywords' content='Jonas Dorfinger, Web, Developer, Photographer, Upper Austria, Austria, CSS, HTML, JavaScript'>
+    <meta name='keywords'
+          content='Jonas Dorfinger, Web, Developer, Photographer, Upper Austria, Austria, CSS, HTML, JavaScript, Angular, TypeScript, Frontend, Backend'>
     <meta name='author' content='Jonas Dorfinger'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta name='description' content='See the best projects, work and images by Jonas Dorfinger on his website.'/>
-    <meta name='og:description' content='See the best projects, work and images by Jonas Dorfinger on his website.'/>
-    <meta property='og:image' content='https://dorfingerjonas.at/img/favicon.ico'>
-    <meta property="og:image:width" content="5000" />
-	  <meta property="og:image:height" content="5000" />
+    <meta name='description' content='See the best projects and work by Jonas Dorfinger on his website.'/>
+    <meta name='og:description' content='See the best projects and work by Jonas Dorfinger on his website.'/>
+    <meta property='og:image' content='./img/favicon.ico'>
+    <meta property="og:image:width" content="5000"/>
+    <meta property="og:image:height" content="5000"/>
     <meta property='og:type' content='website'>
-    <!-- CSS Files -->
-    <link rel='stylesheet' href='./style/nav.css'>
-    <link rel='stylesheet' href='./style/menu.css'>
-    <link rel='stylesheet' href='./style/main.css'>
-    <link rel='stylesheet' href='./style/work.css'>
-    <link rel='stylesheet' href='./style/about.css'>
-    <link rel='stylesheet' href='./style/footer.css'>
-    <link rel='stylesheet' href='./style/skills.css'>
-    <link rel='stylesheet' href='./style/gallery.css'>
+    <!-- Style -->
     <link rel='stylesheet' href='./style/contact.css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap' rel='stylesheet'>
-    <!-- Libraries -->
-    <link rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css'>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/work.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel='stylesheet' href='./style/aos.css'>
+    <!--  Script  -->
+    <script src="scripts/main.js"></script>
+    <!--  Libraries  -->
     <script src='https://kit.fontawesome.com/e7df220bd7.js' crossorigin='anonymous'></script>
-    <script src='https://unpkg.com/aos@next/dist/aos.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/7.9.3/firebase-database.js'></script>
-    <script src='https://www.gstatic.com/firebasejs/7.9.3/firebase-storage.js'></script>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <!-- Script Files -->
-    <script src='./script/nav.js'></script>
-    <script src='./script/menu.js'></script>
-    <script src='./script/main.js'></script>
-    <script src='./script/contact.js'></script>
-    <script src='./script/gallery.js'></script>
-  </head>
-  <body>
-    <div id='burgerBar'>
-      <div id='menuWrapper'>
-        <div class='bar' id='barOne'></div>
-        <div class='bar' id='barTwo'></div>
-        <div class='bar' id='barThree'></div>
-      </div>
+    <script src="./scripts/parallax.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Jonas Dorfinger - Fullstack Developer</h1>
+    <h2>I design and code beautifully simple things.</h2>
+
+    <div id="portrait-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 225 225">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #fff;
+                    }
+
+                    .cls-1, .cls-12, .cls-13, .cls-8 {
+                        fill-rule: evenodd;
+                    }
+
+                    .cls-2 {
+                        fill: #f9dcb9;
+                    }
+
+                    .cls-3 {
+                        fill: var(--primary);
+                    }
+
+                    .cls-4 {
+                        fill: #d1b99b;
+                    }
+
+                    .cls-5 {
+                        fill: #46322d;
+                    }
+
+                    .cls-6 {
+                        fill: none;
+                        stroke: #4f4f4f;
+                        stroke-miterlimit: 10;
+                        opacity: 0.2;
+                    }
+
+                    .cls-7 {
+                        mask: url(#mask);
+                    }
+
+                    .cls-8 {
+                        fill-opacity: 0.7;
+                    }
+
+                    .cls-9 {
+                        mask: url(#mask-2);
+                    }
+
+                    .cls-10 {
+                        mask: url(#mask-3);
+                    }
+
+                    .cls-11 {
+                        fill: #eb5d70;
+                    }
+
+                    .cls-12 {
+                        fill-opacity: 0.16;
+                    }
+
+                    .cls-13 {
+                        opacity: 0.6;
+                    }
+
+                    .cls-14 {
+                        fill-opacity: 0.6;
+                    }
+                </style>
+                <mask x="30.74" y="71" width="144.84" height="153.62" maskUnits="userSpaceOnUse">
+                    <g>
+                        <path class="cls-1"
+                              d="M30.74,158.78V71H175.59v87.78H169a65.84,65.84,0,1,1-131.67,0H30.74Z"/>
+                    </g>
+                </mask>
+                <mask x="94.16" y="122.81" width="25.11" height="19.94" maskUnits="userSpaceOnUse">
+                    <g>
+                        <path class="cls-1"
+                              d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
+                    </g>
+                </mask>
+                <mask x="94.16" y="130.12" width="25.11" height="21.93" maskUnits="userSpaceOnUse">
+                    <g>
+                        <path class="cls-1"
+                              d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
+                    </g>
+                </mask>
+            </defs>
+            <path class="cls-2" d="M81.1,147.38S76,157,72,157s-2,35,38,35V148Z"/>
+            <path class="cls-2" d="M130.9,145.38S136,155,140,155s2,35-38,35V146Z"/>
+            <path class="cls-3"
+                  d="M107,176a48.16,48.16,0,0,1-30-22.47S45,161,35,181c-2,3.95,1.85,24.35,12.44,44.39l59.56-.15Z"/>
+            <path class="cls-4" d="M83,143s10.81,14.16,23,14v5c-11.53-2-23.1-11.38-25-14C82,145.68,83,143,83,143Z"/>
+            <path class="cls-4"
+                  d="M131,139.31S118.19,157.16,106,157v5c11.53-2,24.1-12.38,26-15C131,144.68,131,139.31,131,139.31Z"/>
+            <path class="cls-2"
+                  d="M110.78,55.67C85.8,53.86,65.32,75,67,100a144,144,0,0,0,5.73,31.3,9.5,9.5,0,0,0,.43,1.31C75.67,137.35,91,160,106,159.47c7.69-.25,16.84-7,23.94-13.45a43,43,0,0,0,13.67-26.39c2.13-16.94,4.72-43.7.78-49.39C141.13,65.54,127.53,56.88,110.78,55.67Z"/>
+            <path class="cls-5"
+                  d="M68.44,110.93s1-26.86,3.62-30.28,41.47-27.76,64.69-6.41c3.76,7.51,8.34,13.17,9.11,21l1.5-11.68a13,13,0,0,0,0-3.24c-1.06-8.47-6.68-45.87-23.45-44.2C105,38,77.62,45.42,69.21,62S68.44,110.93,68.44,110.93Z"/>
+            <path class="cls-3" d="M21,225s7.36-31.17,13.23-43a12.94,12.94,0,0,1,2.67-4C42.9,173.06,63,225,63,225Z"/>
+            <path class="cls-6" d="M57.58,225.15S61,204,63,202"/>
+            <path class="cls-3"
+                  d="M179,181c-10-20-42-27.47-42-27.47A48.16,48.16,0,0,1,107,176v49.7l59.64-.45C177.16,205.25,181,184.94,179,181Z"/>
+            <path class="cls-3" d="M193,225s-7.36-31.17-13.23-43a12.94,12.94,0,0,0-2.67-4c-6-5-26.1,46.94-26.1,46.94Z"/>
+            <path class="cls-6" d="M156.42,225.15S153,204,151,202"/>
+            <rect class="cls-3" x="86" y="176" width="46" height="49"/>
+            <g class="cls-7">
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="cls-8"
+                                      d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
+                            </g>
+                            <g class="cls-9">
+                                <path class="cls-1"
+                                      d="M100.06,122.81h14a3.33,3.33,0,0,1,3.32,3.33v4a3.33,3.33,0,0,1-3.32,3.33h-14a3.33,3.33,0,0,1-3.32-3.33v-4A3.33,3.33,0,0,1,100.06,122.81Z"/>
+                            </g>
+                            <g class="cls-10">
+                                <g>
+                                    <circle class="cls-11" cx="103.39" cy="144.74" r="7.31"/>
+                                    <circle class="cls-11" cx="110.03" cy="144.74" r="7.31"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <path class="cls-12"
+                                  d="M98.73,118.83c0,2.93,3.58,5.31,8,5.31h0c4.4,0,8-2.38,8-5.31"/>
+                        </g>
+                        <g>
+                            <g>
+                                <path class="cls-13"
+                                      d="M89.14,92c-3.86.17-10.1,3-9.94,6.87a.17.17,0,0,0,.28.09c1.84-2,14.83-4,19.41-2.91.42.1.74-.31.47-.61C97.09,92.9,92.59,91.85,89.14,92"/>
+                            </g>
+                            <g data-name="Eyebrow">
+                                <path class="cls-13"
+                                      d="M127,92c3.85.17,10.09,3,9.93,6.87,0,.13-.19.18-.28.09-1.83-2-14.83-4-19.41-2.91-.42.1-.74-.31-.47-.61C119,92.9,123.49,91.85,127,92"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <ellipse class="cls-14" cx="90" cy="104" rx="5" ry="4"/>
+            <ellipse class="cls-14" cx="126" cy="104" rx="5" ry="4"/>
+        </svg>
     </div>
 
-    <nav>
-      <span>Jonas Dorfinger</span>
+    <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg">
+        <g fill="var(--primary)" data-depth="0.2">
+            <circle r="56" cx="661" cy="217"></circle>
+            <circle r="26" cx="105" cy="308"></circle>
+            <circle r="16" cx="660" cy="44"></circle>
+            <circle r="41" cx="901" cy="55"></circle>
+            <circle r="32" cx="913" cy="261"></circle>
+            <circle r="30" cx="157" cy="92"></circle>
+            <circle r="49" cx="70" cy="478"></circle>
+            <circle r="22" cx="286" cy="198"></circle>
+        </g>
 
-      <ul>
-        <li id='homeNav'>Home</li>
-        <li id='aboutNav'>About</li>
-        <li id='skillsNav'>Skills</li>
-        <li id='workNav'>Work</li>
-        <li id='galleryNav'>Gallery</li>
-        <li id='contactNav'>Contact</li>
-      </ul>
+        <g id="blob2" fill="var(--primary)" data-depth="0.6">
+            <circle r="7" cx="189" cy="112"></circle>
+            <circle r="25" cx="830" cy="454"></circle>
+            <circle r="21" cx="606" cy="136"></circle>
+            <circle r="50" cx="811" cy="105"></circle>
+            <circle r="42" cx="55" cy="467"></circle>
+            <circle r="14" cx="274" cy="298"></circle>
+            <circle r="32" cx="75" cy="21"></circle>
+            <circle r="9" cx="671" cy="462"></circle>
+        </g>
+    </svg>
+</header>
 
-      <p id='navCopyright'>© Copyright by Jonas Dorfinger, 2020. All rights reserved.</p>
-    </nav>
+<section id="about-wrapper">
+    <div class="about-top-svg-wrapper">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"></path>
+        </svg>
+    </div>
 
-    <section id='homeSection' class='wholeScreen' data-depth='0.6'>
-      <h1 data-aos='fade-down' data-aos-duration='1400' data-aos-easing='ease-out'>Jonas Dorfinger</h1>
-      <p data-aos='fade-down' data-aos-duration='1400' data-aos-easing='ease-out'>Developer. Photographer.</p>
-    </section>
+    <h2>Hi, I'm Jonas. Nice to meet you.</h2>
+    <p>
+        Since beginning my journey as a media technology student, I've done remote work and lots of projects for 5
+        years.
+        I worked for startups and collaborated with talented people to create digital products for both
+        business and
+        consumer use. I'm confident, naturally curious, and perpetually working on improving my skills.
+    </p>
 
-    <section id='aboutSection' class='wholeScreen'>
-      <h1>About</h1>
+    <div class="about-bottom-svg-wrapper">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"></path>
+        </svg>
+    </div>
+</section>
 
-      <div id='aboutContent'>
-        <div class='partOfAbout'>
-          <p>I am a web designer and photographer with three years of coding & design experience. My knowledge in project management, design, coding, and strengths in social communication shape me and my personality.</p>
-          <p>To get new ideas and support my creativity, I spend a lot of time in the mountains skiing. Sometimes, my best ideas grow while running in the morning around my hometown. The most effective time to work for me is in the morning. Although it is early, I am focused on completing tasks to achieve my daily goals.</p>
-          <p>I take my motivation from satisfied customers or colleagues with which I worked. A motivating impulse is to see the completed product, especially the moment you get a smile or just a simple "Thank you" from other people.</p>
-          <p>I believe learning by doing is the most effective way to get into new stuff. This mentality helped me to enhance my skill and always keep improving. I am currently a student who is interested in new challenges. Do not hesitate, contact me using the contact form on this page.</p>
+<div id="column-wrapper">
+    <div class="column" data-aos="fade-up">
+        <i class="fas fa-bezier-curve"></i>
+
+        <div>
+            <h2>Designer</h2>
+            <p>I have a passion for creating beautiful and intuitive user interfaces.</p>
         </div>
 
-        <div class='partOfAbout'>
-          <img src='./img/portrait.jpg' alt='cannot display image' data-aos="fade-left">
-        </div>
-      </div>
-    </section>
-
-    <section id='skillsSection' class='wholeScreen'>
-      <h1>Skills</h1>
-
-      <div id='skillWrapper'>
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-comments'></i>
-            <h2>Communication</h2>
-          </div>
-          <p>My self-confidence level is very good. I have no problem with talking in front of many people. This is a big advantage for me when it comes to presenting projects or work that I have done.</p>
+        <div>
+            <h3>Things I enjoy designing:</h3>
+            <p>UX, UI, Mobile, Web, Apps</p>
         </div>
 
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-code'></i>
-            <h2>Programming</h2>
-          </div>
-          <p>I have been programming for nearly three years from now. In this time I tried a few languages, for example, Java, JavaScript and Powershell. The best language for me is JavaScript combined with HTML and CSS.</p>
+        <div>
+            <h3>Design Tools:</h3>
+            <p>Figma</p>
+            <p>Pen & Paper</p>
+            <p>Adobe Xd</p>
+            <p>Adobe Illustrator</p>
+        </div>
+    </div>
+
+    <div class="column" data-aos="fade-up" data-aos-delay="250">
+        <i class="fas fa-desktop"></i>
+
+        <div>
+            <h2>Frontend Developer</h2>
+            <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
         </div>
 
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-handshake'></i>
-            <h2>Social</h2>
-          </div>
-          <p>Social competence helps me to interact in positive ways with others and manage my own emotions. These skills are varied and include among others self-confidence, self-possession and self-awareness.</p>
+        <div>
+            <h3>Languages I speak:</h3>
+            <p>HTML, CSS, TypeScript, Sass</p>
         </div>
 
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-palette'></i>
-            <h2>Creativity</h2>
-          </div>
-          <p>Being creative helps me become a better problem solver in all areas of my life and work. Creativity helps me to see things differently and better deal with uncertainty. Through creativity, I can try new things out, realize some ideas.</p>
+        <div>
+            <h3>Dev Tools:</h3>
+            <p>GitHub</p>
+            <p>IntelliJ IDEA Ultimate</p>
+            <p>Stackoverflow</p>
+            <p>Codepen</p>
+        </div>
+    </div>
+
+    <div class="column" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-tools"></i>
+
+        <div>
+            <h2>Backend Developer</h2>
+            <p>I build backend services for many use cases with the latest technologies.</p>
         </div>
 
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-users'></i>
-            <h2>Leadership</h2>
-          </div>
-          <p>According to some classmates and teachers, I have very good human characteristics for a project manager or a leading person. I think of myself, one of my strengths is to organize events/projects and motivating people I work with.</p>
+        <div>
+            <h3>Technologies I use:</h3>
+            <p>Java, Kotlin, Node.js</p>
         </div>
 
-        <div class='skill' data-aos="zoom-in">
-          <div class='skillHeadline'>
-            <i class='fas fa-lightbulb'></i>
-            <h2>Commitment</h2>
-          </div>
-          <p>My commitment, a big strength of myself, when working on projects is very high. For me, commitment means, that I try harder, look for solutions when faced with obstacles, don't consider quitting as an option and I don't look back.</p>
+        <div>
+            <h3>Products:</h3>
+            <p>APIs</p>
+            <p>complex algorithms</p>
+            <p>data structure</p>
         </div>
-      </div>
-    </section>
+    </div>
+</div>
 
-    <section id='workSection' class='wholeScreen'>
-      <h1>Work</h1>
+<div id="contact-wrapper" data-aos="zoom-in">
+    <span>Wanna collaborate?</span>
+    <a href="mailto:contact@dorfingerjonas.at">Contact me! <i class="fas fa-chevron-right"></i></a>
+</div>
 
-      <div id='workWrapper'>
-        <div class='workPart'>
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/TicTacToe.jpg' alt='cannot display image'>
-            </div>
+<section id="work-wrapper">
+    <h2>My Recent Work</h2>
+    <h3>Here are a few projects I've worked on recently. Want to see more? Checkout my <a
+            href="https://github.com/dorfingerjonas">GitHub profile</a>!</h3>
 
-            <div class='workBody'>
-              <h1>Tic Tac Toe</h1>
-              <p>Tic Tac Toe is a well-known game, I decided to create my own game, three gamemodes to make the game more attractive. You are able to play the game alone against a bot (gamemode in progress), you can play online with your friend in realtime. It's also possible to play TicTacToe on one device with two people. This game is only a fun project in my leisure time, I wanted to use this project to learn more about online game development an database-client communication.  <a href='https://dorfingerjonas.github.io/TicTacToe/'>Website</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+    <div class="work-content-wrapper">
+        <div class="work" data-aos="fade-right">
+            <figure>
+                <img src="./img/schuldners-liste.jpg" alt="Schuldners Liste" draggable="false">
 
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/SchuldnersListe.jpg' alt='cannot display image'>
-            </div>
+                <figcaption>
+                    <h3>Schuldners Liste</h3>
 
-            <div class='workBody'>
-              <h1>Schuldners Liste</h1>
-              <p>Schuldners Liste is a mobile application made with web technologies. The app is used to help you to keep in mind which persons have debts to you. You have the opportunity to restore deleted entries, this is useful for example if you have deleted the wrong entry. The user of the app can choose his theme. There are several predefined themes from which the user can select his current theme. It is planned that it should be possible to have the themes created by users individually.  <a href='https://schuldners-liste.github.io/'>Website</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+                    <span>web app to keep track of your debtors and stuff</span>
 
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/HTLDirAv.jpg' alt='cannot display image'>
-            </div>
+                    <a href="https://schuldners-liste.com/">View site <i class="fas fa-chevron-right"></i></a>
+                </figcaption>
 
-            <div class='workBody'>
-              <h1>HTL-Dir-Av</h1>
-              <p>HTL-Dir-Av is a website for all principals and heads of departments from higher technical schools in Austria. As part of the semester project in the 11th grade, this project was developed in cooperation with the association. The benefit of this page is, that the club members can upload files and share them. Another feature is the comment functionality, they can start discussions. I have been chosen as the project manager of the three-man team, all of them are colleagues of me. <a href='https://htldirav.net/'>Website</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+                <div class="overlay"></div>
+            </figure>
         </div>
 
-        <div class='workPart'>
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/calendar.jpg' alt='cannot display image'>
-            </div>
+        <div class="work" data-aos="fade-left" data-aos-delay="150">
+            <figure>
+                <img src="./img/ordersystem.svg" alt="Order System" draggable="false">
 
-            <div class='workBody'>
-              <h1>Calendar</h1>
-              <p>I have created my own calendar, inspired by the Google Calendar. I focused my work on the functionality of the application. 'Calendar' was a learning by doing project for me. Before the app, I had nearly no clue about using Date and Time in JavaScript, to improve my knowledge I decided to create my own calendar. It all began with a school exercise in Web development, but I was not happy with the calendar, I wanted to it better and more efficient than my classmates.  <a href='https://calendar.dorfingerjonas.com/'>Website</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+                <figcaption>
+                    <h3>Ordersystem</h3>
 
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/OrderSystem.jpg' alt='cannot display image'>
-            </div>
+                    <span>system for restaurants to digitalize ordering processes</span>
 
-            <div class='workBody'>
-              <h1>Ordersystem</h1>
-              <p>Ordersystem is a mobile app for waiters. In an organization-group for a big event each autumn we had a challenge that we had to deal with. The obstacle was, that the visitors at our event appeared at the same time, around 600 people wanted their food and drinks immediately. Every waiter has the app on his mobile phone and sends the order directly to the kitchen, there, some volunteers prepared the food. Other waiters served the food and drinks to the visitor. <a href='https://github.com/dorfingerjonas/ordersystem/'>Repository</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+                    <a href="https://dorfingerjonas.at/ordersystem">View site <i class="fas fa-chevron-right"></i></a>
+                </figcaption>
 
-          <div class='work'>
-            <div class='workHeader'>
-              <img src='./img/work/DesignDictionary.jpg' alt='cannot display image'>
-            </div>
-
-            <div class='workBody'>
-              <h1>Design Dictionary</h1>
-              <p>Design Dictionary is a website made for developers. It provides a collection of, in my opinion, good looking colors. Some friends are sending me colors which they think are looking good. Design Dictionary was created in the summer of 2019. I struggled when selecting my colors for Ordersystem, and decided to create this page, for me, but also for others to help them. If you have some nice colors, it would be a great pleasure for me to add your color to the collection as well. <a href='https://design-dictionary.github.io/'>Website</a><i class='fas fa-arrow-right'></i></p>
-            </div>
-          </div>
+                <div class="overlay"></div>
+            </figure>
         </div>
-      </div>
 
-      <div id='workButtonWrapper'>
-        <div class='currentWorkPart'></div>
-        <div class='currentWorkPart'></div>
-      </div>
-    </section>
+        <div class="work" data-aos="fade-right" data-aos-delay="300">
+            <figure>
+                <img src="./img/leonie.svg" alt="Leonie" draggable="false">
 
-    <section id='gallerySection' class='wholeScreen'>
-      <h1>Gallery</h1>
+                <figcaption>
+                    <h3>Leonie</h3>
 
-      <div id='images'></div>
-    </section>
+                    <span>ai voice assistant and chatbot (school project)</span>
 
-    <section id='contactSection' class='wholeScreen'>
-      <h1>Contact</h1>
+                    <a href="https://leonie.htl-leonding.ac.at/">View site <i class="fas fa-chevron-right"></i></a>
+                </figcaption>
 
-      <input type='text' placeholder='your email address' id='email' maxlength='80'>
-      <input type='text' placeholder='subject' id='subject' autocomplete='off' maxlength='80'>
-      <textarea id='message' placeholder='message' rows='10' autocomplete='off' maxlength='5000'></textarea>
+                <div class="overlay"></div>
+            </figure>
+        </div>
 
-      <div class='reCaptchaWrapper'>
-        <form action='#' method='POST'>
-          <div class='g-recaptcha' data-callback='recaptchaCompleted' data-sitekey='6LfOF98UAAAAAANlk1pFS_nwyuFGAnOf8dQeRuoy'></div>
-        </form>
-      </div>
+        <div class="work" data-aos="fade-left" data-aos-delay="450">
+            <figure>
+                <img src="./img/rk_logo.svg"
+                     alt="Rotes Kreuz Logo" draggable="false">
 
-      <div id='buttonWrapper'>
-        <p id='errorEmail'> &nbsp; </p>
-        <span class='button' id='sendEmail'>send</span>
-      </div>
-    </section>
+                <figcaption>
+                    <h3>Rotes Kreuz Lernapp</h3>
 
-    <footer>
-      <div id='iconBox'>
+                    <span>unofficial training app for red cross theory</span>
+
+                    <a href="https://rk.dorfingerjonas.com/">View site <i class="fas fa-chevron-right"></i></a>
+                </figcaption>
+
+                <div class="overlay"></div>
+            </figure>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-svg-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div id="icon-wrapper">
         <a href='https://github.com/dorfingerjonas/'><i class='fab fa-github'></i></a>
-        <a href='mailto:contact@dorfingerjonas.at'><i class='fas fa-envelope'></i></a>
-        <a href='https://instagram.com/dorfingerjonas/'><i class='fab fa-instagram'></i></a>
+        <a href='mailto:contact@dorfingerjonas.at'><i class='far fa-envelope'></i></a>
+        <a href='https://www.linkedin.com/in/jonas-dorfinger-b92ba61a4'><i class="fab fa-linkedin-in"></i></a>
         <a href='https://codepen.io/dorfingerjonas'><i class='fab fa-codepen'></i></a>
-        <a href='https://www.youtube.com/channel/UClflTXNXtrM8p_jpYjez-oA/'><i class="fab fa-youtube"></i></a>
-      </div>
+        <a href='https://instagram.com/dorfingerjonas/'><i class='fab fa-instagram'></i></a>
+    </div>
 
-      <div class='footerRow'>
-        <p style='opacity: 0;'>Policy | Repositories</p>
-        <p>© Copyright by Jonas Dorfinger, 2020. All rights reserved.</p>
-        <p><a href='./policy/'>Policy & Privacy</a></p>
-      </div>
-    </footer>
-  </body>
+    <p id="copyright">© Copyright by Jonas Dorfinger, 2022. All rights reserved.</p>
+</footer>
+<script src="./scripts/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
 </html>
