@@ -74,7 +74,7 @@ footer {
     }
 
     #icon-wrapper {
-        width: 70%;
+        width: 80%;
     }
 
     #icon-wrapper a i {
@@ -84,14 +84,19 @@ footer {
     }
 
     #copyright {
+        width: 90%;
         position: relative;
-        font-size: var(--font-size-p);
+        font-size: .9rem;
     }
 }
 
 @media screen and (max-width: 400px) {
     footer {
         justify-content: space-around;
+    }
+
+    #icon-wrapper {
+        width: 90%;
     }
 
     #icon-wrapper a i {

@@ -141,8 +141,21 @@ figcaption {
         width: 100%;
     }
 
+    .work figure figcaption h3 {
+        --font-size-h2: 1.5rem;
+    }
+
+    .work figure figcaption span, .work figure figcaption a {
+        --font-size-p: 1rem;
+    }
+
+    .work figure figcaption span {
+        width: 80%;
+    }
+
     .work figure figcaption a {
-        padding: 10px 20px;
+        margin-top: 10px;
+        padding: 5px 10px;
     }
 }
 
