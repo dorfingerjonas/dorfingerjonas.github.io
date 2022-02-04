@@ -65,9 +65,14 @@ footer {
     position: absolute;
     bottom: 4vh;
     color: #fff;
+    text-align: center;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
+    footer {
+        justify-content: space-around;
+    }
+
     #icon-wrapper {
         width: 70%;
     }
@@ -79,6 +84,24 @@ footer {
     }
 
     #copyright {
+        position: relative;
         font-size: var(--font-size-p);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer {
+        justify-content: space-around;
+    }
+
+    #icon-wrapper a i {
+        width: var(--font-size-h3);
+        height: var(--font-size-h3);
+        font-size: var(--font-size-p);
+    }
+
+    #copyright {
+        position: relative;
+        font-size: .9rem;
     }
 }

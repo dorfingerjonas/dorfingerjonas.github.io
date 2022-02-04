@@ -25,7 +25,11 @@
     font-size: var(--font-size-p);
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
+    #about-wrapper {
+        height: 60vh;
+    }
+
     #about-wrapper h2, .column h2 {
         font-size: var(--font-size-h2);
     }
@@ -111,7 +115,7 @@
     text-align: center;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
     #column-wrapper {
         width: 90%;
         height: unset;
@@ -121,8 +125,13 @@
 
     .column {
         width: 100%;
-        border-bottom: 4px solid #e7ecf3;
+        border-bottom: 2px solid #e7ecf3;
         padding: 15% 0;
+        border-right: none;
+    }
+
+    .column:last-child {
+        border-bottom: none;
     }
 }
 

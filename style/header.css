@@ -39,12 +39,26 @@ h2 {
     z-index: -1;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
     h1 {
         margin: 0;
     }
 
     #portrait-wrapper svg {
         width: 50vw;
+    }
+
+    header {
+        height: 97vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        height: 95vh;
+    }
+
+    h2 {
+        font-size: 1.7rem;
     }
 }

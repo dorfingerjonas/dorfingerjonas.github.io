@@ -9,12 +9,15 @@
     --font-size-p: 1.2rem;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
     :root {
-        --font-size-h1: 6rem;
-        --font-size-h2: 4rem;
-        --font-size-h3: 2.5rem;
-        --font-size-p: 2rem;
+        --font-size-h1: 4rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --font-size-h1: 3rem;
     }
 }
 

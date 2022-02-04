@@ -112,7 +112,7 @@ figcaption {
     transition: opacity 250ms ease-in-out;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
     #work-wrapper {
         height: unset;
         margin-bottom: 15vh;
@@ -143,5 +143,24 @@ figcaption {
 
     .work figure figcaption a {
         padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .work figure figcaption h3 {
+        --font-size-h2: 1.5rem;
+    }
+
+    .work figure figcaption span, .work figure figcaption a {
+        --font-size-p: .8rem;
+    }
+
+    .work figure figcaption span {
+        width: 80%;
+    }
+
+    .work figure figcaption a {
+        margin-top: 10px;
+        padding: 5px 10px;
     }
 }
