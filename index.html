@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jonas Dorfinger | Full Stack Engineer</title>
-    <meta name="description" content="Jonas Dorfinger is a full stack engineer at TIME2WIN, building live race timing software, and a Software Engineering master's student at TU Wien.">
+    <meta name="description"
+        content="Jonas Dorfinger is a full stack engineer at TIME2WIN, building live race timing software, and a Software Engineering master's student at TU Wien.">
     <meta name="author" content="Jonas Dorfinger">
     <meta name="theme-color" content="#84a6d6">
     <link rel="canonical" href="https://dorfingerjonas.at/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dorfingerjonas.at/">
     <meta property="og:title" content="Jonas Dorfinger | Full Stack Engineer">
-    <meta property="og:description" content="Turning split seconds into software. Full stack engineer at TIME2WIN, master's student at TU Wien.">
+    <meta property="og:description"
+        content="Turning split seconds into software. Full stack engineer at TIME2WIN, master's student at TU Wien.">
     <meta property="og:image" content="https://dorfingerjonas.at/img/favicon.ico">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="preload" href="fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
@@ -20,294 +23,361 @@
     <script src="scripts/boot.js"></script>
     <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Skip to content</a>
 
-<header class="nav">
-    <a class="nav__logo" href="#top">Jonas</a>
+    <header class="nav">
+        <a class="nav__logo" href="#top">Jonas</a>
 
-    <nav class="nav__links" aria-label="Sections">
-        <a href="#now">Now</a>
-        <a href="#stack">Stack</a>
-        <a href="#projects">Projects</a>
-        <a href="#beyond">Beyond code</a>
-        <a href="#contact">Contact</a>
-    </nav>
+        <nav class="nav__links" aria-label="Sections">
+            <a href="#now">Now</a>
+            <a href="#stack">Stack</a>
+            <a href="#projects">Projects</a>
+            <a href="#beyond">Beyond code</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <div class="tools">
-        <button class="tool" type="button" data-accent-cycle aria-label="Change accent colour" title="Change accent colour">
-            <span class="dot"></span>
-        </button>
-        <button class="tool" type="button" data-theme-toggle aria-label="Switch between light and dark theme" title="Light / dark">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
-        </button>
-    </div>
-</header>
-
-<main id="main">
-    <section class="hero" id="top" data-parallax>
-        <div class="bubbles" aria-hidden="true">
-            <span class="bubble" style="--x:12%; --y:22%; --s:clamp(4rem, 9vw, 8rem); --depth:.3; --o:.35; --n:0"></span>
-            <span class="bubble" style="--x:88%; --y:16%; --s:clamp(5rem, 12vw, 11rem); --depth:.2; --o:.28; --n:1"></span>
-            <span class="bubble bubble--ring" style="--x:22%; --y:70%; --s:clamp(2.5rem, 5vw, 4.5rem); --depth:.8; --n:2"></span>
-            <span class="bubble" style="--x:80%; --y:74%; --s:clamp(3rem, 6vw, 5.5rem); --depth:.6; --o:.5; --n:3"></span>
-            <span class="bubble" style="--x:6%; --y:88%; --s:clamp(6rem, 14vw, 13rem); --depth:.15; --o:.22; --n:4"></span>
-            <span class="bubble" style="--x:67%; --y:9%; --s:clamp(1rem, 2vw, 1.75rem); --depth:1; --o:.7; --n:5"></span>
-            <span class="bubble bubble--ring" style="--x:94%; --y:48%; --s:clamp(1.5rem, 3vw, 2.5rem); --depth:.9; --n:6"></span>
-            <span class="bubble" style="--x:33%; --y:12%; --s:clamp(.75rem, 1.5vw, 1.25rem); --depth:1.1; --o:.6; --n:7"></span>
-        </div>
-
-        <div class="hero__portrait" data-reveal="pop">
-            <span class="blob" aria-hidden="true"></span>
-            <figure class="portrait">
-                <svg class="avatar" data-eyes viewBox="0 0 225 225" role="img" aria-label="Illustrated portrait of Jonas Dorfinger">
-                    <defs>
-                        <mask id="av-face" x="30.74" y="71" width="144.84" height="153.62" maskUnits="userSpaceOnUse">
-                            <path fill="#fff" fill-rule="evenodd" d="M30.74,158.78V71H175.59v87.78H169a65.84,65.84,0,1,1-131.67,0H30.74Z"/>
-                        </mask>
-                        <mask id="av-teeth" x="94.16" y="122.81" width="25.11" height="19.94" maskUnits="userSpaceOnUse">
-                            <path fill="#fff" fill-rule="evenodd" d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
-                        </mask>
-                        <mask id="av-tongue" x="94.16" y="130.12" width="25.11" height="21.93" maskUnits="userSpaceOnUse">
-                            <path fill="#fff" fill-rule="evenodd" d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
-                        </mask>
-                    </defs>
-                    <path fill="#f9dcb9" d="M81.1,147.38S76,157,72,157s-2,35,38,35V148Z"/>
-                    <path fill="#f9dcb9" d="M130.9,145.38S136,155,140,155s2,35-38,35V146Z"/>
-                    <path class="shirt" d="M107,176a48.16,48.16,0,0,1-30-22.47S45,161,35,181c-2,3.95,1.85,24.35,12.44,44.39l59.56-.15Z"/>
-                    <path fill="#d1b99b" d="M83,143s10.81,14.16,23,14v5c-11.53-2-23.1-11.38-25-14C82,145.68,83,143,83,143Z"/>
-                    <path fill="#d1b99b" d="M131,139.31S118.19,157.16,106,157v5c11.53-2,24.1-12.38,26-15C131,144.68,131,139.31,131,139.31Z"/>
-                    <path fill="#f9dcb9" d="M110.78,55.67C85.8,53.86,65.32,75,67,100a144,144,0,0,0,5.73,31.3,9.5,9.5,0,0,0,.43,1.31C75.67,137.35,91,160,106,159.47c7.69-.25,16.84-7,23.94-13.45a43,43,0,0,0,13.67-26.39c2.13-16.94,4.72-43.7.78-49.39C141.13,65.54,127.53,56.88,110.78,55.67Z"/>
-                    <path fill="#46322d" d="M68.44,110.93s1-26.86,3.62-30.28,41.47-27.76,64.69-6.41c3.76,7.51,8.34,13.17,9.11,21l1.5-11.68a13,13,0,0,0,0-3.24c-1.06-8.47-6.68-45.87-23.45-44.2C105,38,77.62,45.42,69.21,62S68.44,110.93,68.44,110.93Z"/>
-                    <path class="shirt" d="M21,225s7.36-31.17,13.23-43a12.94,12.94,0,0,1,2.67-4C42.9,173.06,63,225,63,225Z"/>
-                    <path fill="none" stroke="#4f4f4f" stroke-miterlimit="10" opacity=".2" d="M57.58,225.15S61,204,63,202"/>
-                    <path class="shirt" d="M179,181c-10-20-42-27.47-42-27.47A48.16,48.16,0,0,1,107,176v49.7l59.64-.45C177.16,205.25,181,184.94,179,181Z"/>
-                    <path class="shirt" d="M193,225s-7.36-31.17-13.23-43a12.94,12.94,0,0,0-2.67-4c-6-5-26.1,46.94-26.1,46.94Z"/>
-                    <path fill="none" stroke="#4f4f4f" stroke-miterlimit="10" opacity=".2" d="M156.42,225.15S153,204,151,202"/>
-                    <rect class="shirt" x="86" y="176" width="46" height="49"/>
-                    <g mask="url(#av-face)">
-                        <path fill-opacity=".7" fill-rule="evenodd" d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z"/>
-                        <g mask="url(#av-teeth)">
-                            <path fill="#fff" fill-rule="evenodd" d="M100.06,122.81h14a3.33,3.33,0,0,1,3.32,3.33v4a3.33,3.33,0,0,1-3.32,3.33h-14a3.33,3.33,0,0,1-3.32-3.33v-4A3.33,3.33,0,0,1,100.06,122.81Z"/>
-                        </g>
-                        <g mask="url(#av-tongue)" fill="#eb5d70">
-                            <circle cx="103.39" cy="144.74" r="7.31"/>
-                            <circle cx="110.03" cy="144.74" r="7.31"/>
-                        </g>
-                        <path fill-opacity=".16" fill-rule="evenodd" d="M98.73,118.83c0,2.93,3.58,5.31,8,5.31h0c4.4,0,8-2.38,8-5.31"/>
-                        <path opacity=".6" fill-rule="evenodd" d="M89.14,92c-3.86.17-10.1,3-9.94,6.87a.17.17,0,0,0,.28.09c1.84-2,14.83-4,19.41-2.91.42.1.74-.31.47-.61C97.09,92.9,92.59,91.85,89.14,92"/>
-                        <path opacity=".6" fill-rule="evenodd" d="M127,92c3.85.17,10.09,3,9.93,6.87,0,.13-.19.18-.28.09-1.83-2-14.83-4-19.41-2.91-.42.1-.74-.31-.47-.61C119,92.9,123.49,91.85,127,92"/>
-                    </g>
-                    <g class="eyes" fill-opacity=".6">
-                        <ellipse class="eye" cx="90" cy="104" rx="5" ry="4"/>
-                        <ellipse class="eye" cx="126" cy="104" rx="5" ry="4"/>
-                    </g>
+        <div class="tools">
+            <button class="tool" type="button" data-accent-cycle aria-label="Change accent colour"
+                title="Change accent colour">
+                <span class="dot"></span>
+            </button>
+            <button class="tool" type="button" data-theme-toggle aria-label="Switch between light and dark theme"
+                title="Light / dark">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" />
                 </svg>
-            </figure>
-            <span class="sticker sticker--a">Full stack engineer</span>
-            <span class="sticker sticker--b">TU Wien</span>
-            <span class="sticker sticker--c">Makes pizza</span>
+            </button>
         </div>
+    </header>
 
-        <p class="hi" data-reveal style="--i:1">Hi, I'm Jonas.</p>
-        <h1 data-reveal style="--i:2">Turning <span class="squiggle">split seconds</span> into software.</h1>
-        <p class="lede" data-reveal style="--i:3">
-            I build the software behind live race timing at TIME2WIN: results calculated in real time,
-            GPS tracking and the graphics you see on TV.
-        </p>
-
-        <div class="cta" data-reveal style="--i:4">
-            <a class="btn btn--main" href="mailto:hallo@dorfingerjonas.at">Say hallo
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            </a>
-            <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">GitHub
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </a>
-            <a class="btn" href="https://www.linkedin.com/in/jonas-dorfinger-b92ba61a4" target="_blank" rel="noopener">LinkedIn
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </a>
-        </div>
-    </section>
-
-    <section class="wrap" id="now">
-        <header class="title" data-reveal>
-            <span class="chip">Now</span>
-            <h2>What keeps me busy</h2>
-        </header>
-
-        <div class="bento" data-stagger>
-            <article class="card card--work" data-reveal="pop" data-tilt>
-                <span class="chip">Work</span>
-                <h3>Full stack engineer at TIME2WIN</h3>
-                <p>
-                    I lead software projects, improve internal processes and handle live race timing data,
-                    from the timing line to the result list while the race is still on.
-                </p>
-                <ul class="tags">
-                    <li>Real-time results</li>
-                    <li>GPS tracking</li>
-                    <li>TV overlay graphics</li>
-                    <li>Project lead</li>
-                </ul>
-            </article>
-
-            <article class="card card--lap" data-reveal="pop">
-                <span class="chip">Your lap</span>
-                <p class="lap" data-lap role="timer">00:00.0</p>
-                <p>Time you've spent on this page. Occupational habit.</p>
-            </article>
-
-            <article class="card card--study" data-reveal="pop" data-tilt>
-                <span class="chip">Study</span>
-                <h3>Master's in Software Engineering</h3>
-                <p>At TU Wien since 2023. Bachelor's in Informatics: done.</p>
-            </article>
-
-            <article class="card card--abroad" data-reveal="pop" data-tilt>
-                <span class="chip">Abroad</span>
-                <h3>Hej, Jönköping!</h3>
-                <p>Exchange semester in Sweden, summer term 2026.</p>
-            </article>
-        </div>
-    </section>
-
-    <section class="wrap" id="stack">
-        <header class="title" data-reveal>
-            <span class="chip">Stack</span>
-            <h2>What I build with</h2>
-        </header>
-
-        <!-- TEMP: switch for comparing both stack ideas. Remove together with the losing block and the script below. -->
-        <div class="stack-switch" role="group" aria-label="Stack layout">
-            <button type="button" data-stack-show="recipe" aria-pressed="true">Recipe</button>
-            <button type="button" data-stack-show="stickers" aria-pressed="false">Stickers</button>
-        </div>
-
-        <!-- Stack idea B: recipe card -->
-        <div class="card recipe" data-stack-option="recipe" data-reveal="pop">
-            <span class="tape tape--left" aria-hidden="true"></span>
-            <span class="tape tape--right" aria-hidden="true"></span>
-
-            <div class="recipe__main">
-                <p class="recipe__kicker">Recipe no. 1</p>
-                <h3>Most things I build</h3>
-
-                <dl class="recipe__meta">
-                    <div>
-                        <dt>On the clock</dt>
-                        <dd data-lap>00:00.0</dd>
-                    </div>
-                    <div>
-                        <dt>Serves</dt>
-                        <dd>Web and mobile</dd>
-                    </div>
-                </dl>
-
-                <h4>Ingredients</h4>
-                <ul class="ingredients" data-stagger>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Angular</span><span class="ingredient__note">for the front of house</span></label></li>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">TypeScript</span><span class="ingredient__note">a generous base</span></label></li>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Java</span><span class="ingredient__note">one strong shot</span></label></li>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Flutter</span><span class="ingredient__note">for the mobile slice</span></label></li>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Node.js</span><span class="ingredient__note">keeps the kitchen running</span></label></li>
-                    <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Python</span><span class="ingredient__note">to taste</span></label></li>
-                </ul>
-
-                <p class="recipe__done">All in. Ready to cook? <a href="#contact">Say hallo.</a></p>
+    <main id="main">
+        <section class="hero" id="top" data-parallax>
+            <div class="bubbles" aria-hidden="true">
+                <span class="bubble"
+                    style="--x:12%; --y:22%; --s:clamp(4rem, 9vw, 8rem); --depth:.3; --o:.35; --n:0"></span>
+                <span class="bubble"
+                    style="--x:88%; --y:16%; --s:clamp(5rem, 12vw, 11rem); --depth:.2; --o:.28; --n:1"></span>
+                <span class="bubble bubble--ring"
+                    style="--x:22%; --y:70%; --s:clamp(2.5rem, 5vw, 4.5rem); --depth:.8; --n:2"></span>
+                <span class="bubble"
+                    style="--x:80%; --y:74%; --s:clamp(3rem, 6vw, 5.5rem); --depth:.6; --o:.5; --n:3"></span>
+                <span class="bubble"
+                    style="--x:6%; --y:88%; --s:clamp(6rem, 14vw, 13rem); --depth:.15; --o:.22; --n:4"></span>
+                <span class="bubble"
+                    style="--x:67%; --y:9%; --s:clamp(1rem, 2vw, 1.75rem); --depth:1; --o:.7; --n:5"></span>
+                <span class="bubble bubble--ring"
+                    style="--x:94%; --y:48%; --s:clamp(1.5rem, 3vw, 2.5rem); --depth:.9; --n:6"></span>
+                <span class="bubble"
+                    style="--x:33%; --y:12%; --s:clamp(.75rem, 1.5vw, 1.25rem); --depth:1.1; --o:.6; --n:7"></span>
             </div>
 
-            <div class="recipe__method">
-                <h4>Method</h4>
-                <ol>
-                    <li>Mix until the tests pass.</li>
-                    <li>Bake until it ships.</li>
-                    <li>Serve hot, ideally in real time.</li>
-                </ol>
-                <svg class="icon recipe__stamp" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 4 6.5a16 16 0 0 1 16 0z"/><circle cx="10" cy="10" r=".8"/><circle cx="14.2" cy="11" r=".8"/><circle cx="12" cy="15" r=".8"/></svg>
+            <div class="hero__portrait" data-reveal="pop">
+                <span class="blob" aria-hidden="true"></span>
+                <figure class="portrait">
+                    <svg class="avatar" data-eyes viewBox="0 0 225 225" role="img"
+                        aria-label="Illustrated portrait of Jonas Dorfinger">
+                        <defs>
+                            <mask id="av-face" x="30.74" y="71" width="144.84" height="153.62"
+                                maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M30.74,158.78V71H175.59v87.78H169a65.84,65.84,0,1,1-131.67,0H30.74Z" />
+                            </mask>
+                            <mask id="av-teeth" x="94.16" y="122.81" width="25.11" height="19.94"
+                                maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z" />
+                            </mask>
+                            <mask id="av-tongue" x="94.16" y="130.12" width="25.11" height="21.93"
+                                maskUnits="userSpaceOnUse">
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z" />
+                            </mask>
+                        </defs>
+                        <path fill="#f9dcb9" d="M81.1,147.38S76,157,72,157s-2,35,38,35V148Z" />
+                        <path fill="#f9dcb9" d="M130.9,145.38S136,155,140,155s2,35-38,35V146Z" />
+                        <path class="shirt"
+                            d="M107,176a48.16,48.16,0,0,1-30-22.47S45,161,35,181c-2,3.95,1.85,24.35,12.44,44.39l59.56-.15Z" />
+                        <path fill="#d1b99b"
+                            d="M83,143s10.81,14.16,23,14v5c-11.53-2-23.1-11.38-25-14C82,145.68,83,143,83,143Z" />
+                        <path fill="#d1b99b"
+                            d="M131,139.31S118.19,157.16,106,157v5c11.53-2,24.1-12.38,26-15C131,144.68,131,139.31,131,139.31Z" />
+                        <path fill="#f9dcb9"
+                            d="M110.78,55.67C85.8,53.86,65.32,75,67,100a144,144,0,0,0,5.73,31.3,9.5,9.5,0,0,0,.43,1.31C75.67,137.35,91,160,106,159.47c7.69-.25,16.84-7,23.94-13.45a43,43,0,0,0,13.67-26.39c2.13-16.94,4.72-43.7.78-49.39C141.13,65.54,127.53,56.88,110.78,55.67Z" />
+                        <path fill="#46322d"
+                            d="M68.44,110.93s1-26.86,3.62-30.28,41.47-27.76,64.69-6.41c3.76,7.51,8.34,13.17,9.11,21l1.5-11.68a13,13,0,0,0,0-3.24c-1.06-8.47-6.68-45.87-23.45-44.2C105,38,77.62,45.42,69.21,62S68.44,110.93,68.44,110.93Z" />
+                        <path class="shirt"
+                            d="M21,225s7.36-31.17,13.23-43a12.94,12.94,0,0,1,2.67-4C42.9,173.06,63,225,63,225Z" />
+                        <path fill="none" stroke="#4f4f4f" stroke-miterlimit="10" opacity=".2"
+                            d="M57.58,225.15S61,204,63,202" />
+                        <path class="shirt"
+                            d="M179,181c-10-20-42-27.47-42-27.47A48.16,48.16,0,0,1,107,176v49.7l59.64-.45C177.16,205.25,181,184.94,179,181Z" />
+                        <path class="shirt"
+                            d="M193,225s-7.36-31.17-13.23-43a12.94,12.94,0,0,0-2.67-4c-6-5-26.1,46.94-26.1,46.94Z" />
+                        <path fill="none" stroke="#4f4f4f" stroke-miterlimit="10" opacity=".2"
+                            d="M156.42,225.15S153,204,151,202" />
+                        <rect class="shirt" x="86" y="176" width="46" height="49" />
+                        <g mask="url(#av-face)">
+                            <path fill-opacity=".7" fill-rule="evenodd"
+                                d="M94.16,131.54a12.63,12.63,0,0,0,25.1-.06,1.39,1.39,0,0,0-1.23-1.36H95.47A1.42,1.42,0,0,0,94.16,131.54Z" />
+                            <g mask="url(#av-teeth)">
+                                <path fill="#fff" fill-rule="evenodd"
+                                    d="M100.06,122.81h14a3.33,3.33,0,0,1,3.32,3.33v4a3.33,3.33,0,0,1-3.32,3.33h-14a3.33,3.33,0,0,1-3.32-3.33v-4A3.33,3.33,0,0,1,100.06,122.81Z" />
+                            </g>
+                            <g mask="url(#av-tongue)" fill="#eb5d70">
+                                <circle cx="103.39" cy="144.74" r="7.31" />
+                                <circle cx="110.03" cy="144.74" r="7.31" />
+                            </g>
+                            <path fill-opacity=".16" fill-rule="evenodd"
+                                d="M98.73,118.83c0,2.93,3.58,5.31,8,5.31h0c4.4,0,8-2.38,8-5.31" />
+                            <path opacity=".6" fill-rule="evenodd"
+                                d="M89.14,92c-3.86.17-10.1,3-9.94,6.87a.17.17,0,0,0,.28.09c1.84-2,14.83-4,19.41-2.91.42.1.74-.31.47-.61C97.09,92.9,92.59,91.85,89.14,92" />
+                            <path opacity=".6" fill-rule="evenodd"
+                                d="M127,92c3.85.17,10.09,3,9.93,6.87,0,.13-.19.18-.28.09-1.83-2-14.83-4-19.41-2.91-.42.1-.74-.31-.47-.61C119,92.9,123.49,91.85,127,92" />
+                        </g>
+                        <g class="eyes" fill-opacity=".6">
+                            <ellipse class="eye" cx="90" cy="104" rx="5" ry="4" />
+                            <ellipse class="eye" cx="126" cy="104" rx="5" ry="4" />
+                        </g>
+                    </svg>
+                </figure>
+                <span class="sticker sticker--a">Full stack engineer</span>
+                <span class="sticker sticker--b">TU Wien</span>
+                <span class="sticker sticker--c">Makes pizza</span>
             </div>
-        </div>
 
-        <!-- Stack idea A: sticker board -->
-        <div class="board" data-stack-option="stickers" data-reveal="pop" data-drag-area hidden>
-            <ul class="techs" data-stagger>
-                <li class="tech" data-reveal="pop" data-drag>Angular</li>
-                <li class="tech" data-reveal="pop" data-drag>TypeScript</li>
-                <li class="tech" data-reveal="pop" data-drag>Java</li>
-                <li class="tech" data-reveal="pop" data-drag>Flutter</li>
-                <li class="tech" data-reveal="pop" data-drag>Node.js</li>
-                <li class="tech" data-reveal="pop" data-drag>Python</li>
-            </ul>
-            <p class="board__hint">Go on, drag them around.</p>
-        </div>
+            <p class="hi" data-reveal style="--i:1">Hi, I'm Jonas.</p>
+            <h1 data-reveal style="--i:2">Turning <span class="squiggle">split seconds</span> into software.</h1>
+            <p class="lede" data-reveal style="--i:3">
+                I build the software behind live race timing at TIME2WIN: results calculated in real time,
+                GPS tracking and the graphics you see on TV.
+            </p>
 
-        <!-- TEMP: see stack switch above. -->
-        <script>
-            document.querySelectorAll('[data-stack-show]').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    document.querySelectorAll('[data-stack-option]').forEach(function (option) {
-                        option.hidden = option.dataset.stackOption !== button.dataset.stackShow;
-                    });
-                    document.querySelectorAll('[data-stack-show]').forEach(function (other) {
-                        other.setAttribute('aria-pressed', String(other === button));
+            <div class="cta" data-reveal style="--i:4">
+                <a class="btn btn--main" href="mailto:hallo@dorfingerjonas.at">Say hallo
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2" />
+                        <path d="m3 7 9 6 9-6" />
+                    </svg>
+                </a>
+                <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">GitHub
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17 17 7M8 7h9v9" />
+                    </svg>
+                </a>
+                <a class="btn" href="https://www.linkedin.com/in/jonas-dorfinger-b92ba61a4" target="_blank"
+                    rel="noopener">LinkedIn
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17 17 7M8 7h9v9" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="wrap" id="now">
+            <header class="title" data-reveal>
+                <span class="chip">Now</span>
+                <h2>What keeps me busy</h2>
+            </header>
+
+            <div class="bento" data-stagger>
+                <article class="card card--work" data-reveal="pop" data-tilt>
+                    <span class="chip">Work</span>
+                    <h3>Full stack engineer at TIME2WIN</h3>
+                    <p>
+                        I lead software projects, improve internal processes and handle live race timing data,
+                        from the timing line to the result list while the race is still on.
+                    </p>
+                    <ul class="tags">
+                        <li>Real-time results</li>
+                        <li>GPS tracking</li>
+                        <li>TV overlay graphics</li>
+                        <li>Project lead</li>
+                    </ul>
+                </article>
+
+                <article class="card card--lap" data-reveal="pop">
+                    <span class="chip">Your lap</span>
+                    <p class="lap" data-lap role="timer">00:00.0</p>
+                    <p>Time you've spent on this page. Occupational habit.</p>
+                </article>
+
+                <article class="card card--study" data-reveal="pop" data-tilt>
+                    <span class="chip">Study</span>
+                    <h3>Master's in Software Engineering</h3>
+                    <p>At TU Wien since 2023. Bachelor's in Informatics: done.</p>
+                </article>
+
+                <article class="card card--abroad" data-reveal="pop" data-tilt>
+                    <span class="chip">Abroad</span>
+                    <h3>Hej, Jönköping!</h3>
+                    <p>Exchange semester in Sweden, summer term 2026.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="wrap" id="stack">
+            <header class="title" data-reveal>
+                <span class="chip">Stack</span>
+                <h2>What I build with</h2>
+            </header>
+
+            <!-- TEMP: switch for comparing both stack ideas. Remove together with the losing block and the script below. -->
+            <div class="stack-switch" role="group" aria-label="Stack layout">
+                <button type="button" data-stack-show="recipe" aria-pressed="true">Recipe</button>
+                <button type="button" data-stack-show="stickers" aria-pressed="false">Stickers</button>
+            </div>
+
+            <!-- Stack idea B: recipe card -->
+            <div class="card recipe" data-stack-option="recipe" data-reveal="pop">
+                <span class="tape tape--left" aria-hidden="true"></span>
+                <span class="tape tape--right" aria-hidden="true"></span>
+
+                <div class="recipe__main">
+                    <p class="recipe__kicker">Recipe no. 1</p>
+                    <h3>Most things I build</h3>
+
+                    <dl class="recipe__meta">
+                        <div>
+                            <dt>On the clock</dt>
+                            <dd data-lap>00:00.0</dd>
+                        </div>
+                        <div>
+                            <dt>Serves</dt>
+                            <dd>Web and mobile</dd>
+                        </div>
+                    </dl>
+
+                    <h4>Ingredients</h4>
+                    <ul class="ingredients" data-stagger>
+                        <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Angular</span><span
+                                    class="ingredient__note">for the front of house</span></label></li>
+                        <li data-reveal><label><input type="checkbox"><span
+                                    class="ingredient__name">TypeScript</span><span class="ingredient__note">a generous
+                                    base</span></label></li>
+                        <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Java</span><span
+                                    class="ingredient__note">one strong shot</span></label></li>
+                        <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Flutter</span><span
+                                    class="ingredient__note">for the mobile slice</span></label></li>
+                        <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Node.js</span><span
+                                    class="ingredient__note">keeps the kitchen running</span></label></li>
+                        <li data-reveal><label><input type="checkbox"><span class="ingredient__name">Python</span><span
+                                    class="ingredient__note">to taste</span></label></li>
+                    </ul>
+
+                    <p class="recipe__done">All in. Ready to cook? <a href="#contact">Say hallo.</a></p>
+                </div>
+
+                <div class="recipe__method">
+                    <h4>Method</h4>
+                    <ol>
+                        <li>Mix until the tests pass.</li>
+                        <li>Bake until it ships.</li>
+                        <li>Serve hot, ideally in real time.</li>
+                    </ol>
+                    <svg class="icon recipe__stamp" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 21 4 6.5a16 16 0 0 1 16 0z" />
+                        <circle cx="10" cy="10" r=".8" />
+                        <circle cx="14.2" cy="11" r=".8" />
+                        <circle cx="12" cy="15" r=".8" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Stack idea A: sticker board -->
+            <div class="board" data-stack-option="stickers" data-reveal="pop" data-drag-area hidden>
+                <ul class="techs" data-stagger>
+                    <li class="tech" data-reveal="pop" data-drag>Angular</li>
+                    <li class="tech" data-reveal="pop" data-drag>TypeScript</li>
+                    <li class="tech" data-reveal="pop" data-drag>Java</li>
+                    <li class="tech" data-reveal="pop" data-drag>Flutter</li>
+                    <li class="tech" data-reveal="pop" data-drag>Node.js</li>
+                    <li class="tech" data-reveal="pop" data-drag>Python</li>
+                </ul>
+                <p class="board__hint">Go on, drag them around.</p>
+            </div>
+
+            <!-- TEMP: see stack switch above. -->
+            <script>
+                document.querySelectorAll('[data-stack-show]').forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        document.querySelectorAll('[data-stack-option]').forEach(function (option) {
+                            option.hidden = option.dataset.stackOption !== button.dataset.stackShow;
+                        });
+                        document.querySelectorAll('[data-stack-show]').forEach(function (other) {
+                            other.setAttribute('aria-pressed', String(other === button));
+                        });
                     });
                 });
-            });
-        </script>
-    </section>
+            </script>
+        </section>
 
-    <section class="wrap" id="projects">
-        <header class="title" data-reveal>
-            <span class="chip">Projects</span>
-            <h2>Things I've made</h2>
-        </header>
+        <section class="wrap" id="projects">
+            <header class="title" data-reveal>
+                <span class="chip">Projects</span>
+                <h2>Things I've made</h2>
+            </header>
 
-        <div class="projects" data-stagger>
-            <a class="card project" href="https://ordersystem.at" target="_blank" rel="noopener" data-reveal="pop" data-tilt>
-                <div class="project__art">
-                    <img src="img/ordersystem.svg" alt="" width="1000" height="497" loading="lazy">
-                </div>
-                <h3>Ordersystem</h3>
-                <p>A lightweight mobile ordering system built for local events, from concerts to community gatherings.</p>
-                <!-- <ul class="tags"> -->
+            <div class="projects" data-stagger>
+                <a class="card project" href="https://ordersystem.at" target="_blank" rel="noopener" data-reveal="pop"
+                    data-tilt>
+                    <div class="project__art">
+                        <img src="img/ordersystem.svg" alt="" width="1000" height="497" loading="lazy">
+                    </div>
+                    <h3>Ordersystem</h3>
+                    <p>A lightweight mobile ordering system built for local events, from concerts to community
+                        gatherings.</p>
+                    <!-- <ul class="tags"> -->
                     <!-- <li>Owner</li>
                     <li>Developer</li> -->
-                <!-- </ul> -->
-                <span class="project__go">ordersystem.at
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                </span>
-            </a>
+                    <!-- </ul> -->
+                    <span class="project__go">ordersystem.at
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                    </span>
+                </a>
 
-            <a class="card project" href="https://findas.at" target="_blank" rel="noopener" data-reveal="pop" data-tilt>
-                <div class="project__art">
-                    <img src="img/findas.svg" alt="" width="2000" height="994" loading="lazy">
-                </div>
-                <h3>Findas</h3>
-                <p>A simple self-service system helping schools organize, track, and find available learning and play materials.</p>
-                <!-- <ul class="tags"> -->
+                <a class="card project" href="https://findas.at" target="_blank" rel="noopener" data-reveal="pop"
+                    data-tilt>
+                    <div class="project__art">
+                        <img src="img/findas.svg" alt="" width="2000" height="994" loading="lazy">
+                    </div>
+                    <h3>Findas</h3>
+                    <p>A simple self-service system helping schools organize, track, and find available learning and
+                        play materials.</p>
+                    <!-- <ul class="tags"> -->
                     <!-- <li>Owner</li>
                     <li>Developer</li> -->
-                <!-- </ul> -->
-                <span class="project__go">findas.at
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                </span>
-            </a>
+                    <!-- </ul> -->
+                    <span class="project__go">findas.at
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                    </span>
+                </a>
 
-            <a class="card project" href="https://dorfingerjonas.at/meal-planner" target="_blank" rel="noopener" data-reveal="pop" data-tilt>
-                <div class="project__art">
-                    <img src="img/mealmate.svg" alt="" width="1000" height="497" loading="lazy">
-                </div>
-                <h3>MealMate</h3>
-                <p>A free, household-focused recipe app featuring smart recipe imports and weekly meal planning.</p>
-                <!-- <ul class="tags"> -->
+                <a class="card project" href="https://dorfingerjonas.at/meal-planner" target="_blank" rel="noopener"
+                    data-reveal="pop" data-tilt>
+                    <div class="project__art">
+                        <img src="img/mealmate.svg" alt="" width="1000" height="497" loading="lazy">
+                    </div>
+                    <h3>MealMate</h3>
+                    <p>A free, household-focused recipe app featuring smart recipe imports and weekly meal planning.</p>
+                    <!-- <ul class="tags"> -->
                     <!-- <li>Owner</li>
                     <li>Developer</li> -->
-                <!-- </ul> -->
-                <span class="project__go">dorfingerjonas.at/meal-planner
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                </span>
-            </a>
+                    <!-- </ul> -->
+                    <span class="project__go">dorfingerjonas.at/meal-planner
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                    </span>
+                </a>
 
-            <!-- PLACEHOLDER
+                <!-- PLACEHOLDER
             <div class="card project project--soon" data-reveal="pop">
                 <div class="project__art">
                     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 4 6.5a16 16 0 0 1 16 0z"/><circle cx="10" cy="10" r=".8"/><circle cx="14.2" cy="11" r=".8"/><circle cx="12" cy="15" r=".8"/></svg>
@@ -315,75 +385,97 @@
                 <h3>Dough is resting</h3>
                 <p>Placeholder. Another one lands here.</p>
             </div> -->
-        </div>
-
-        <p class="after" data-reveal>
-            <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">More on GitHub
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-            </a>
-        </p>
-    </section>
-
-    <section class="wrap" id="beyond">
-        <header class="title" data-reveal>
-            <span class="chip">Beyond code</span>
-            <h2>Life outside the editor</h2>
-        </header>
-
-        <ul class="hobbies" data-stagger>
-            <li class="card hobby" data-reveal="pop">
-                <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
-                <h3>Photography</h3>
-                <p>A camera comes along almost everywhere I go.</p>
-            </li>
-            <li class="card hobby" data-reveal="pop">
-                <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/></svg></span>
-                <h3>Red Cross</h3>
-                <p>EMT with the Austrian Red Cross. </p>
-            </li>
-            <li class="card hobby" data-reveal="pop">
-                <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3 3 10.5l7 2.5 2.5 7z"/><path d="M10 13 21 3"/></svg></span>
-                <h3>Travel</h3>
-                <p>Love being on the road. Most recently: Roadtrip in Sweden & Norway</p>
-            </li>
-            <li class="card hobby" data-reveal="pop">
-                <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 4 6.5a16 16 0 0 1 16 0z"/><circle cx="10" cy="10" r=".8"/><circle cx="14.2" cy="11" r=".8"/><circle cx="12" cy="15" r=".8"/></svg></span>
-                <h3>Cooking</h3>
-                <p>I love to cook. Pizza most of all.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section class="wrap" id="contact">
-        <div class="shout" data-reveal="pop">
-            <h2>Say hallo.</h2>
-            <p>
-                You've been here for <span data-lap>00:00.0</span>.
-                Question, idea or pizza recommendation: my inbox is open.
-            </p>
-            <a class="btn btn--mail" href="mailto:hallo@dorfingerjonas.at">hallo@dorfingerjonas.at</a>
-            <div class="shout__links">
-                <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">GitHub
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                </a>
-                <a class="btn" href="https://www.linkedin.com/in/jonas-dorfinger-b92ba61a4" target="_blank" rel="noopener">LinkedIn
-                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-                </a>
             </div>
-        </div>
-    </section>
-</main>
 
-<footer class="foot">
-    <p>© 2026 Jonas Dorfinger</p>
-    <p>
-        Accent of this visit:
-        <button class="foot__accent" type="button" data-accent-cycle title="Change accent colour">
-            <span class="dot"></span><span data-accent-name>Sky</span>
-        </button>
-    </p>
-    <p><a href="imprint.html">Imprint</a></p>
-</footer>
+            <p class="after" data-reveal>
+                <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">More on GitHub
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7 17 17 7M8 7h9v9" />
+                    </svg>
+                </a>
+            </p>
+        </section>
+
+        <section class="wrap" id="beyond">
+            <header class="title" data-reveal>
+                <span class="chip">Beyond code</span>
+                <h2>Life outside the editor</h2>
+            </header>
+
+            <ul class="hobbies" data-stagger>
+                <li class="card hobby" data-reveal="pop">
+                    <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                            <circle cx="12" cy="13" r="3.5" />
+                        </svg></span>
+                    <h3>Photography</h3>
+                    <p>A camera comes along almost everywhere I go.</p>
+                </li>
+                <li class="card hobby" data-reveal="pop">
+                    <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z" />
+                        </svg></span>
+                    <h3>Red Cross</h3>
+                    <p>EMT with the Austrian Red Cross. </p>
+                </li>
+                <li class="card hobby" data-reveal="pop">
+                    <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M21 3 3 10.5l7 2.5 2.5 7z" />
+                            <path d="M10 13 21 3" />
+                        </svg></span>
+                    <h3>Travel</h3>
+                    <p>Love being on the road. Most recently: Roadtrip in Sweden & Norway</p>
+                </li>
+                <li class="card hobby" data-reveal="pop">
+                    <span class="hobby__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21 4 6.5a16 16 0 0 1 16 0z" />
+                            <circle cx="10" cy="10" r=".8" />
+                            <circle cx="14.2" cy="11" r=".8" />
+                            <circle cx="12" cy="15" r=".8" />
+                        </svg></span>
+                    <h3>Cooking</h3>
+                    <p>I love to cook. Pizza most of all.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="wrap" id="contact">
+            <div class="shout" data-reveal="pop">
+                <h2>Say hallo.</h2>
+                <p>
+                    You've been here for <span data-lap>00:00.0</span>.
+                    Question, idea or pizza recommendation: my inbox is open.
+                </p>
+                <a class="btn btn--mail" href="mailto:hallo@dorfingerjonas.at">hallo@dorfingerjonas.at</a>
+                <div class="shout__links">
+                    <a class="btn" href="https://github.com/dorfingerjonas" target="_blank" rel="noopener">GitHub
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                    </a>
+                    <a class="btn" href="https://www.linkedin.com/in/jonas-dorfinger-b92ba61a4" target="_blank"
+                        rel="noopener">LinkedIn
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>© 2026 Jonas Dorfinger</p>
+        <p>
+            Accent of this visit:
+            <button class="foot__accent" type="button" data-accent-cycle title="Change accent colour">
+                <span class="dot"></span><span data-accent-name>Sky</span>
+            </button>
+        </p>
+        <p><a href="imprint.html">Imprint</a></p>
+    </footer>
 
 </body>
+
 </html>
