@@ -224,14 +224,7 @@
                 <h2>What I build with</h2>
             </header>
 
-            <!-- TEMP: switch for comparing both stack ideas. Remove together with the losing block and the script below. -->
-            <div class="stack-switch" role="group" aria-label="Stack layout">
-                <button type="button" data-stack-show="recipe" aria-pressed="true">Recipe</button>
-                <button type="button" data-stack-show="stickers" aria-pressed="false">Stickers</button>
-            </div>
-
-            <!-- Stack idea B: recipe card -->
-            <div class="card recipe" data-stack-option="recipe" data-reveal="pop">
+            <div class="card recipe" data-reveal="pop">
                 <span class="tape tape--left" aria-hidden="true"></span>
                 <span class="tape tape--right" aria-hidden="true"></span>
 
@@ -286,8 +279,9 @@
                 </div>
             </div>
 
-            <!-- Stack idea A: sticker board -->
-            <div class="board" data-stack-option="stickers" data-reveal="pop" data-drag-area hidden>
+            <!-- ALTERNATIVE: sticker board. To switch back, uncomment this block and comment out the recipe card above.
+                 Its styles (.board, .techs, .tech) and the drag code in main.js are still in place.
+            <div class="board" data-reveal="pop" data-drag-area>
                 <ul class="techs" data-stagger>
                     <li class="tech" data-reveal="pop" data-drag>Angular</li>
                     <li class="tech" data-reveal="pop" data-drag>TypeScript</li>
@@ -298,20 +292,7 @@
                 </ul>
                 <p class="board__hint">Go on, drag them around.</p>
             </div>
-
-            <!-- TEMP: see stack switch above. -->
-            <script>
-                document.querySelectorAll('[data-stack-show]').forEach(function (button) {
-                    button.addEventListener('click', function () {
-                        document.querySelectorAll('[data-stack-option]').forEach(function (option) {
-                            option.hidden = option.dataset.stackOption !== button.dataset.stackShow;
-                        });
-                        document.querySelectorAll('[data-stack-show]').forEach(function (other) {
-                            other.setAttribute('aria-pressed', String(other === button));
-                        });
-                    });
-                });
-            </script>
+            -->
         </section>
 
         <section class="wrap" id="projects">

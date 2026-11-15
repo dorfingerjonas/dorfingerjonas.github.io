@@ -560,21 +560,6 @@ h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -.03
 }
 .recipe__method:hover .recipe__stamp { rotate: 374deg; }
 
-/* TEMP: stack switch */
-.stack-switch {
-    display: inline-flex;
-    gap: .25rem;
-    margin-bottom: 1.75rem;
-    padding: .3rem;
-    background: var(--card);
-    border: 2px dashed var(--line);
-    border-radius: 999px;
-    font-size: .85rem;
-    font-weight: 800;
-}
-.stack-switch button { padding: .4rem .9rem; border-radius: 999px; }
-.stack-switch button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
-
 /* Projects */
 .projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 
